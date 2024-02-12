@@ -1,0 +1,33 @@
+@import '../../../styles/variables.scss';
+
+.myBtnGrenn {
+    background-color: $buttonGreen;
+    color: $textColorWhite;
+    border: none;
+    text-transform: uppercase;
+}
+
+.myBtnGrenn:hover {
+    background-color: $buttonGreenHover;
+}
+
+.myBtnGrenn:active {
+    background-color: $buttonGreenHover;
+    color: rgba($textColorWhite, 0.7);
+}
+
+.myBtnGray {
+    background-color: $buttonGray;
+    color: $textColorBlack;
+    border: none;
+    text-transform: uppercase;
+}
+
+.myBtnGray:hover {
+    background-color: $buttonGrayHover;
+}
+
+.myBtnGray:active {
+    background-color: $buttonGrayHover;
+    color: rgba($textColorBlack, 0.6);
+}
