@@ -1,7 +1,35 @@
+@import './fonts.scss';
+
+$font-family-base: "Oswald", "Tahoma", sans-serif;
+
 $textColorWhite: #ffffff;
 $textColorBlack: #111111;
+$mainTextColor: #444444;
+
+$fontSizeMobile: 12px;
+$fontSizeTablet: 14px;
+$fontSizeDesktop: 16px;
+
+$backgroundColorWhite: #ffffff;
+$backgroundColorGray: #f2f2f2;
 
 $buttonGreen: #68b738;
 $buttonGreenHover: #5eaa2f;
 $buttonGray: #f2f2f2;
 $buttonGrayHover: #ebebeb;
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden,
+input[type="file"].visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

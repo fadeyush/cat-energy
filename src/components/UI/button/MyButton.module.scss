@@ -1,6 +1,7 @@
 @import '../../../styles/variables.scss';
 
 .myBtnGrenn {
+    font-family: $font-family-base;
     background-color: $buttonGreen;
     color: $textColorWhite;
     border: none;
@@ -17,6 +18,7 @@
 }
 
 .myBtnGray {
+    font-family: $font-family-base;
     background-color: $buttonGray;
     color: $textColorBlack;
     border: none;

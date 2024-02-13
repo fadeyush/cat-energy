@@ -1,6 +1,6 @@
 export interface PropsProperties {
     children?: React.ReactNode;
-    className: string;
+    className?: string;
     colorType: string;
 }
 
