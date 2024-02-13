@@ -11,6 +11,8 @@
     border-bottom: 1px solid $backgroundColorGray;
 
     padding: 22px 0;
+    
+    cursor: pointer;
 
     a {   
         color: $textColorBlack;
@@ -24,10 +26,7 @@
     a:active {
         color: rgba($textColorBlack, 0.3);
     }
-    
 }
-
-
 
 @media (min-width: $tablet-width) {
     
