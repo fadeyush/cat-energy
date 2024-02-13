@@ -1,12 +1,22 @@
 import React, { FC } from 'react';
-import { Link } from 'react-router-dom';
+import '../styles/PageHeader.scss';
+import { PageHederItemProps } from '../types/pageHeader';
+import PageHeaderItem from './PageHeaderItem';
 
 const PageHeader: FC = () => {
+
+    const pages:PageHederItemProps[] = [
+        {name:'Главная', link: '/about'},
+        {name:'Каталог продукции', link: '/catalog'},
+        {name:'Подбор программы', link: '/program'},
+    ]
     return (
         <div>
-            <Link to='/about'>Главная</Link>    
-            <Link to='/catalog'>Каталог продукции</Link>
-            <Link to='/program'>Подбор программы</Link>
+            <ul className='main-nav__list'>
+                {pages.map(page =>
+                    <PageHeaderItem key={page.link} link={page.link} name={page.name}/>
+                )}
+            </ul>
         </div>
     );
 };
