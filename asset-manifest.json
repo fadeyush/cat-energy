@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/cat-energy/static/css/main.05cee4b5.css",
+    "main.js": "/cat-energy/static/js/main.79db665b.js",
+    "static/media/oswaldmedium.woff": "/cat-energy/static/media/oswaldmedium.a6da779c2d8873598271.woff",
+    "static/media/oswaldregular.woff": "/cat-energy/static/media/oswaldregular.e83727e13e0c1c89d321.woff",
+    "static/media/oswaldmedium.woff2": "/cat-energy/static/media/oswaldmedium.53f50c7e014ddff31a3e.woff2",
+    "static/media/oswaldregular.woff2": "/cat-energy/static/media/oswaldregular.c7cf8322bfbe63ab5f87.woff2",
+    "static/media/logo-desktop.svg": "/cat-energy/static/media/logo-desktop.be4fc39a76ddfdbefc048a5b56704be0.svg",
+    "static/media/logo-tablet.svg": "/cat-energy/static/media/logo-tablet.0baa7f16ec6dd2c8d2f540fa2d8e2187.svg",
+    "static/media/logo-mobile.svg": "/cat-energy/static/media/logo-mobile.2abe52f0ada503e776033a4ca64af503.svg",
+    "index.html": "/cat-energy/index.html",
+    "main.05cee4b5.css.map": "/cat-energy/static/css/main.05cee4b5.css.map",
+    "main.79db665b.js.map": "/cat-energy/static/js/main.79db665b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.05cee4b5.css",
+    "static/js/main.79db665b.js"
+  ]
+}
