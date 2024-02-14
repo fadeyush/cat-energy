@@ -9,7 +9,7 @@ const PageHeader: FC = () => {
     const pages:PageHederItemProps[] = [
         {name:'Главная', link: '/about'},
         {name:'Каталог продукции', link: '/catalog'},
-        {name:'Подбор программы', link: '/program'},
+        {name:'Подбор программы', link: '/program'}
     ];
 
     const toggleModal = () => {
@@ -20,7 +20,7 @@ const PageHeader: FC = () => {
     }
 
     return (
-        <div>
+        <div className='page-header'>
             <PageHeaderLogo onClick={toggleModal}/>
             <ul className='main-nav__list'>
                 {pages.map(page =>
