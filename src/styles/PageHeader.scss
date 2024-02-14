@@ -19,20 +19,21 @@
 }
 
 .navLogo__wrapper {
-    width: 280px;
+    width: 190px;
     text-align: center;
     margin: 0 auto;
 
     box-sizing: border-box;
 
     padding: 13px 0;
-
-    position: relative;
 }
 
 .navLogo {
     height: 65px;
     border-bottom: 1px solid $backgroundColorGray;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15%;
 }
 
 .navLogo__elem {
@@ -50,13 +51,13 @@
 
 .navLogo__button {
     border: none;
-    position: absolute;
     top: 0;
     right: 0;
     background-color: transparent;
     width: 35px;
     min-height: 50px;
     cursor: pointer;
+    position: relative;
 }
 
 .navLogo__button::before {

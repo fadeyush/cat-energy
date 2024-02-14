@@ -9,15 +9,15 @@ import { NavLink } from 'react-router-dom';
 const PageHeaderLogo: FC<LogoProps> = ({onClick}) => {
     const windowInnerWidth = useResize();
     return (
-        <div>
+        <div className='navLogo'>
             <NavLink to={'/about'}>
-                <div className='navLogo'>
+                <div>
                     <div className='navLogo__wrapper'>   
                         {windowInnerWidth < ScreenWidth.tabletWidth ? <LogoMobile className='navLogo__elem'/> : windowInnerWidth < ScreenWidth.desktopWidth ? <LogoTablet className='navLogo__elem'/> : <LogoDesktop className='navLogo__elem'/>}
-                        <button className='navLogo__button' onClick={onClick}/>
                     </div>
                 </div>
             </NavLink>
+            <button className='navLogo__button' onClick={onClick}/>
         </div>
     );
 };
