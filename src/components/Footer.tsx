@@ -7,9 +7,11 @@ import FooterCopyright from './FooterCopyright';
 const Footer: FC = () => {
     return (
         <footer className='page-footer'>
-            <FooterLogo/>
-            <FooterMediaList/>
-            <FooterCopyright/>
+            <div className='page-footer__wrapper'>
+                <FooterLogo/>
+                <FooterMediaList/>
+                <FooterCopyright/>
+            </div>
         </footer>
     );
 };

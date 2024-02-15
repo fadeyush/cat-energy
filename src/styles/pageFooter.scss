@@ -2,9 +2,11 @@
 
 .page-footer {
     background-color: $backgroundColorGray;
+    box-sizing: border-box;
 }
 
 .footer-copyright {
+    box-sizing: border-box;
     display: flex;
     padding: 20px 15% 14px;
     justify-content: space-between;
@@ -44,9 +46,25 @@
     }
 }
 
-
-
 @media (min-width: $tablet-width) {
+    .page-footer {
+        height: 150px;
+    }
+    .page-footer__wrapper {
+        display: flex;
+        margin: 0 auto;
+        width: 90%;
+        justify-content: space-between;
+        
+        padding: 60px 0;
+        box-sizing: border-box;
+    }
+
+    .footer-copyright {
+        width: 162px;
+        height: 34px;
+        padding: 0;
+    }
 }
 
 @media (min-width: $desktop-width) {
