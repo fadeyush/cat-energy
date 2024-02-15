@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.scss';
-import MyButton from './components/UI/button/MyButton';
-import { buttonTypes } from './types/button';
-import PageHeader from './components/PageHeader';
 import Router from './components/Router';
+import PageHeaderNavigation from './components/PageHeaderNavigation';
 
 function App() {
   return (
     <div className="App">
-      <PageHeader/>
+      <PageHeaderNavigation/>
       <Router/>
     </div>
   );

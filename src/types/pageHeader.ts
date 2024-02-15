@@ -1,6 +1,7 @@
 export interface PageHederItemProps {
     name: string;
     link: string;
+    onClick: () => void;
 }
 
 export enum Pages {
@@ -8,8 +9,4 @@ export enum Pages {
     catalog = '/catalog',
     program = '/program',
     error = '/error',
-}
-
-export interface HeaderNavigationProps {
-    location: string;
 }

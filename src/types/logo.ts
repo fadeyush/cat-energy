@@ -1,5 +1,6 @@
 export interface LogoProps {
-    onClick: () => void;
+    onClickButton: () => void;
+    onClickLogo: () => void;
 }
 
 export enum ScreenWidth {

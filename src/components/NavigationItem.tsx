@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom';
 import { PageHederItemProps } from '../types/pageHeader';
 import '../styles/PageHeaderItem.scss';
 
-const PageHeaderItem: FC<PageHederItemProps> = ({link, name}) => {
+const PageHeaderItem: FC<PageHederItemProps> = ({link, name, onClick}) => {
     return (
         <li className='main-nav__item'>
-            <NavLink 
+            <NavLink onClick={onClick}
             className={({ isActive }) => isActive ? `main-nav__item--active` : undefined}
             to={link}>
                 {name}
