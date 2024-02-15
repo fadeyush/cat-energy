@@ -2,31 +2,34 @@
 
 .promo {
     background: linear-gradient(180deg,$backgroundColorGreen 62.8%,$backgroundColorWhite 62.4%);
-    background-image: url(../assets/img/index-background-mobile@1x.jpg), linear-gradient(180deg,$backgroundColorGreen 62.8%,$backgroundColorWhite 62.4%);
+    background-image: url(../assets/img/index-background-mobile@2x.jpg), linear-gradient(180deg,$backgroundColorGreen 100.8%,$backgroundColorWhite 62.4%);
     background-repeat: no-repeat;
     background-position: top center;
+    background-size: auto 309px;
+    
+    color: $textColorWhite;
 }
 
 .promo__wrapper {
     padding: 0 15%;
-    background-image: url(../assets/img/content/index-can-mobile@1x.png);
+    background-image: url(../assets/img/content/index-can-mobile@2x.png);
     background-repeat: no-repeat;
     background-position: center 170px;
+    background-size: 280px 270px;
+    
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .promo__title {
-    color: $textColorWhite;
     font-size: 36px;
     margin: 0;
     padding: 30px 0;
     line-height: 36px;
     font-weight: 400;
-    text-align: center;
 }
 
 .promo__info {
-    color: $textColorWhite;
-    text-align: center;
     text-transform: uppercase;
     margin: 0;
     line-height: 14px;
@@ -51,7 +54,59 @@
 }
 
 @media (min-width: $tablet-width) {
+    .promo {
+        background: $backgroundColorWhite;
+        color: $textColorBlack;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .promo__wrapper {
+        padding: 0;
+        padding-left: 10%;
+        padding-top: 40px;
+        text-align: start;
+        min-height: 860px;
+
+        background-image: url(../assets/img/content/index-can-desktop@2x.png);
+
+        background-position: center 235px;
+        background-size: 709px 609px;
+    }
+
+    .promo__title {
+        font-size: 60px;
+        padding: 0;
+        padding-bottom: 45px;
+        line-height: 60px;
+    }
+
+    .promo__info {
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 45px;
+    }
+
+    .promo__button {
+        width: 245px;
+        height: 52px;
+    
+        font-size: 20px;
+        line-height: 20px;
+    
+        margin: 0;
+    }
+    
 }
 
 @media (min-width: $desktop-width) {
+    .promo {
+        width: 100%;
+        margin: 0;
+    }
+    .promo__wrapper {
+       width: 1220px;
+       margin: 0 auto;
+    }
+
 }

@@ -9,9 +9,11 @@ const PromoSection: FC = () => {
     return (
         <section className='promo'>
             <div className='promo__wrapper'>
-                <h1 className='promo__title'>Функциональное питание для котов</h1>
+                <h1 className='promo__title'>Функциональное<br/> питание для котов</h1>
                 <p className='promo__info'>Занялся собой? Займись котом!</p>
-                <MyButton colorType={buttonTypes.green} className='promo__button'><NavLink to={Pages.program}>Подобрать программу</NavLink></MyButton>
+                <MyButton colorType={buttonTypes.green} className='promo__button'>
+                    <NavLink to={Pages.program}>Подобрать программу</NavLink>
+                </MyButton>
             </div>
         </section>
     );
