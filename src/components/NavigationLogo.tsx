@@ -10,7 +10,7 @@ const PageHeaderLogo: FC<LogoProps> = ({onClickButton, onClickLogo}) => {
     const windowInnerWidth = useResize();
     return (
         <div className='navLogo'>
-            <NavLink  onClick={onClickLogo} className='navLogo__wrapper' to={'/about'}>
+            <NavLink onClick={onClickLogo} className='navLogo__wrapper' to={'/about'}>
                 {windowInnerWidth < ScreenWidth.tabletWidth ? <LogoMobile className='navLogo__elem'/> : windowInnerWidth < ScreenWidth.desktopWidth ? <LogoTablet className='navLogo__elem'/> : <LogoDesktop className='navLogo__elem'/>}
             </NavLink>
             <button className='navLogo__button' onClick={onClickButton}/>

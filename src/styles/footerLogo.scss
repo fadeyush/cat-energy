@@ -1,0 +1,31 @@
+@import './variables.scss';
+
+.logo-footer__wrapper {
+    width: 100%;
+    border-bottom: 1px solid $borderFooter;
+    display: block;
+
+    padding: 37px 0 27px 0;
+}
+
+.logo-footer {
+    width: 128px;
+    height: 24px;
+
+    display: block;
+    margin: 0 auto;
+}
+
+.logo-footer:hover *  {
+    opacity: 0.9;
+}
+
+.logo-footer:active *  {
+    opacity: 0.8;
+}
+
+@media (min-width: $tablet-width) {
+}
+
+@media (min-width: $desktop-width) {
+}

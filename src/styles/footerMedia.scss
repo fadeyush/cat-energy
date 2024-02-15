@@ -1,0 +1,47 @@
+@import './variables.scss';
+
+.footer-media__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 12%;
+    align-items: center;
+
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid $borderFooter;
+}
+
+.footer-media__ikon {
+    &--vk * {
+        width: 22px;
+        height: 12px;
+    }
+
+    &--ig * {
+        width: 16px;
+        height: 16px;
+    }
+
+    &--fb * {
+        width: 10px;
+        height: 19px;
+    }
+}
+
+.footer-media__ikon * {
+    fill: $footerMediaIkonColor;
+}
+
+.footer-media__ikon:hover * {
+    fill: $buttonGreen;
+}
+
+.footer-media__ikon:active * {
+    fill: $buttonGreen;
+    opacity: 0.8;
+}

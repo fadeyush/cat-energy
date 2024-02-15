@@ -7,8 +7,8 @@ const PageHeaderItem: FC<PageHederItemProps> = ({link, name, onClick}) => {
     return (
         <li className='main-nav__item'>
             <NavLink onClick={onClick}
-            className={({ isActive }) => isActive ? `main-nav__item--active` : undefined}
-            to={link}>
+                    className={({ isActive }) => isActive ? `main-nav__item--active` : undefined}
+                    to={link}>
                 {name}
             </NavLink> 
         </li>
