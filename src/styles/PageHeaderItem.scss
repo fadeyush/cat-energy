@@ -53,27 +53,40 @@
 }
 
 @media (min-width: $desktop-width) {
-    .main-nav__item {
-        background-color: $backgroundColorGreen;  
+    .page-header__navigation {
+        &--about {
+            .main-nav__item {
+                background-color: $backgroundColorGreen;
+            }
+
+            .main-nav__item { 
+                a {
+                    color: $textColorWhite;
+                }
+    
+                a.main-nav__item--active::after {
+                    background-color: $textColorWhite;
+                    bottom: 35px;
+                }
+    
+                a:hover {
+                    color: rgba($textColorWhite, 0.6);
+                }
+            
+                a:active {
+                    color: rgba($textColorWhite, 0.3);
+                }
+            }
+        }
+    }
+    .main-nav__item {  
         padding: 73px 0;
 
         a {
             font-size: 20px;
-            color: $textColorWhite;
         }
-
         a.main-nav__item--active::after {
-            background-color: $textColorWhite;
             bottom: 35px;
         }
-
-        a:hover {
-            color: rgba($textColorWhite, 0.6);
-        }
-    
-        a:active {
-            color: rgba($textColorWhite, 0.3);
-        }
-
     }
 }

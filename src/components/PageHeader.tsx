@@ -1,32 +1,14 @@
 import React, { FC } from 'react';
 import '../styles/PageHeader.scss';
-import { PageHederItemProps } from '../types/pageHeader';
-import PageHeaderItem from './PageHeaderItem';
-import PageHeaderLogo from './PageHeaderLogo';
+import PageHeaderNavigation from './PageHeaderNavigation';
+import { useLocation } from 'react-router-dom';
 
 const PageHeader: FC = () => {
-
-    const pages:PageHederItemProps[] = [
-        {name:'Главная', link: '/about'},
-        {name:'Каталог продукции', link: '/catalog'},
-        {name:'Подбор программы', link: '/program'}
-    ];
-
-    const toggleModal = () => {
-        const navBar = document.querySelector('.main-nav__list');
-        const navBarWrapper = document.querySelector('.navLogo');
-        navBar?.classList.toggle("main-nav__list--opened");
-        navBarWrapper?.classList.toggle("navLogo--opened");
-    }
-
+    const location = useLocation();
     return (
         <header className='page-header'>
-            <PageHeaderLogo onClick={toggleModal}/>
-            <ul className='main-nav__list'>
-                {pages.map(page =>
-                    <PageHeaderItem key={page.link} link={page.link} name={page.name}/>
-                )}
-            </ul>
+            <PageHeaderNavigation location={location.pathname}/>
+            {}
         </header>
     );
 };

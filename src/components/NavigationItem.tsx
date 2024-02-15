@@ -7,7 +7,7 @@ const PageHeaderItem: FC<PageHederItemProps> = ({link, name}) => {
     return (
         <li className='main-nav__item'>
             <NavLink 
-            className={({ isActive }) => isActive ? 'main-nav__item--active' : undefined} 
+            className={({ isActive }) => isActive ? `main-nav__item--active` : undefined}
             to={link}>
                 {name}
             </NavLink> 
