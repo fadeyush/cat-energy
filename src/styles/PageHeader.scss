@@ -136,5 +136,26 @@
 }
 
 @media (min-width: $desktop-width) {
+    .page-header {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .main-nav__list {
+        justify-content: end;
+        gap: 5%;
+
+        width: 50%;
+
+        background-color: $backgroundColorGreen;
+    }
+
+    .navLogo__wrapper {
+        padding: 51px 0;
+    }
+
     
+    .navLogo__elem {
+        width: 200px;
+        height: 65px;
+    }
 }

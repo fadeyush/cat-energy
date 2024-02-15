@@ -4,6 +4,6 @@ export interface LogoProps {
 
 export enum ScreenWidth {
     mobileWidth = 320,
-    tabletWidth = 768,
-    desktopWidth = 1300
+    tabletWidth = 740,
+    desktopWidth = 1200
 }

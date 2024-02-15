@@ -20,14 +20,14 @@ const PageHeader: FC = () => {
     }
 
     return (
-        <div className='page-header'>
+        <header className='page-header'>
             <PageHeaderLogo onClick={toggleModal}/>
             <ul className='main-nav__list'>
                 {pages.map(page =>
                     <PageHeaderItem key={page.link} link={page.link} name={page.name}/>
                 )}
             </ul>
-        </div>
+        </header>
     );
 };
 
