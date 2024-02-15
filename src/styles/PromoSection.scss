@@ -1,0 +1,57 @@
+@import './variables.scss';
+
+.promo {
+    background: linear-gradient(180deg,$backgroundColorGreen 62.8%,$backgroundColorWhite 62.4%);
+    background-image: url(../assets/img/index-background-mobile@1x.jpg), linear-gradient(180deg,$backgroundColorGreen 62.8%,$backgroundColorWhite 62.4%);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.promo__wrapper {
+    padding: 0 15%;
+    background-image: url(../assets/img/content/index-can-mobile@1x.png);
+    background-repeat: no-repeat;
+    background-position: center 170px;
+}
+
+.promo__title {
+    color: $textColorWhite;
+    font-size: 36px;
+    margin: 0;
+    padding: 30px 0;
+    line-height: 36px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.promo__info {
+    color: $textColorWhite;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 14px;
+    margin-bottom: 300px;
+}
+
+.promo__button {
+    width: 280px;
+    height: 40px;
+
+    font-size: 14px;
+
+    margin: 0 auto;
+    display: block;
+
+    margin-bottom: 22px;
+
+    a {
+        text-decoration: none;
+        color: $textColorWhite;
+    }
+}
+
+@media (min-width: $tablet-width) {
+}
+
+@media (min-width: $desktop-width) {
+}

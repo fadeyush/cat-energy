@@ -1,10 +1,11 @@
 import React, { FC } from 'react';
+import PromoSection from '../components/PromoSection';
 
 const Main: FC = () => {
     return (
-        <div>
-            Главная страница
-        </div>
+        <main>
+           <PromoSection/>
+        </main>
     );
 };
 

@@ -3,9 +3,12 @@
 .myBtnGrenn {
     font-family: $font-family-base;
     background-color: $buttonGreen;
+    font-weight: 400;
     color: $textColorWhite;
     border: none;
     text-transform: uppercase;
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
 .myBtnGrenn:hover {
@@ -23,6 +26,7 @@
     color: $textColorBlack;
     border: none;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .myBtnGray:hover {
