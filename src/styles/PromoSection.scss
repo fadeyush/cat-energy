@@ -46,11 +46,11 @@
     display: block;
 
     margin-bottom: 22px;
+}
 
-    a {
-        text-decoration: none;
-        color: $textColorWhite;
-    }
+.promo__button-link {
+    text-decoration: none;
+    color: $textColorWhite;
 }
 
 @media (min-width: $tablet-width) {

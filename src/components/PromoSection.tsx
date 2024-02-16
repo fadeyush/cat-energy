@@ -11,9 +11,9 @@ const PromoSection: FC = () => {
             <div className='promo__wrapper'>
                 <h1 className='promo__title'>Функциональное<br/> питание для котов</h1>
                 <p className='promo__info'>Занялся собой? Займись котом!</p>
-                <MyButton colorType={buttonTypes.green} className='promo__button'>
-                    <NavLink to={Pages.program}>Подобрать программу</NavLink>
-                </MyButton>
+                <NavLink className={'promo__button-link'} to={Pages.program}>
+                    <MyButton colorType={buttonTypes.green} className='promo__button'>Подобрать программу</MyButton>
+                </NavLink>
             </div>
         </section>
     );

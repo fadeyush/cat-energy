@@ -1,0 +1,106 @@
+@import './variables.scss';
+
+.program__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.program__item {
+    background-color: $backgroundColorGray;
+    min-height: 266px;
+    padding: 22px 15%;
+    box-sizing: border-box;
+}
+
+.program__item__wrapper {
+    padding-left: 22px;
+}
+
+.program__title {
+    font-size: 24px;
+    line-height: 37px;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-left: 70px;
+    color: $textColorBlack;
+    margin: 0;
+    margin-bottom: 35px;
+    box-sizing: border-box;
+    padding-top: 5px;
+    
+    position: relative;
+
+    &--slim::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $buttonGreen;
+    }
+
+    &--pro::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        
+        background-color: $buttonGreen;
+    }
+
+    &--slim::after {
+        position: absolute;
+        content: '';
+        top: -2px;
+        left: 8px;
+        width: 35px;
+        height: 49px;
+
+        background-image: url(../assets/img/icon-cat-slim.svg);
+    }
+
+    &--pro::after {
+        position: absolute;
+        content: '';
+        top: 10px;
+        left: -9px;
+        width: 67px;
+        height: 28px;
+
+        background-image: url(../assets/img/icon-cat-pro.svg);
+    }
+}
+
+.program__info {
+    font-family: 'Arial';
+    margin: 0;
+    line-height: 18px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid $borderFooter;
+}
+
+.program__button {
+    text-decoration: none;
+    color: $textColorBlack;
+    text-transform: uppercase;
+    padding-top: 22px;
+    box-sizing: border-box;
+    display: block;
+
+    font-size: 16px;
+    line-height: 16px;
+}
+
+@media (min-width: $tablet-width) {
+}
+
+@media (min-width: $desktop-width) {
+}
