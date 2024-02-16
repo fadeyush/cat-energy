@@ -143,12 +143,6 @@
     .page-header__navigation {
         width: 1200px;
         margin: 0 auto;
-
-        &--about {
-            .main-nav__list {
-                background-color: $backgroundColorGreen;
-            }
-        }
     }
     .main-nav__list {
         justify-content: end;
