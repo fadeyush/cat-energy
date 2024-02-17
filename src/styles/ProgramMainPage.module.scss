@@ -91,12 +91,40 @@
     text-decoration: none;
     color: $textColorBlack;
     text-transform: uppercase;
-    padding-top: 22px;
+    margin-top: 22px;
     box-sizing: border-box;
     display: block;
 
     font-size: 16px;
     line-height: 16px;
+
+    position: relative;
+    width: 100%;
+
+    span::after {
+        position: absolute;
+        content: '';
+        top: 2px;
+        left: 97px;
+        width: 24px;
+        height: 11px;
+
+        background-image: url(../assets/img/icon-right-arrow-long.svg);
+        background-size: 24px 11px;
+        transition: all .1s linear;
+    }
+}
+
+.program__button:hover {
+    span::after {
+        width: 33px;
+        background-image: url(../assets/img/icon-right-arrow-verylong.svg);
+        background-size: 33px 11px;
+    }
+}
+
+.program__button:active {
+    opacity: 0.3;
 }
 
 @media (min-width: $tablet-width) {
