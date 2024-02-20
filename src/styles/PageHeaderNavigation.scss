@@ -141,7 +141,7 @@
 
 @media (min-width: $desktop-width) {
     .page-header__navigation {
-        width: 1200px;
+        width: $desktop-content-width;
         margin: 0 auto;
     }
     .main-nav__list {

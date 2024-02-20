@@ -13,12 +13,15 @@ const Andvantage: FC = () => {
     ]
     return (
         <section className={classes.advantage}>
-            <h2 className={classes.advantage__title}>Как это работает</h2>
-            <ul className={classes.advantage__list}>
-                {advantageItems.map(advantage =>
-                    <AdvantagesItem index={advantage.index} className={advantage.className} info={advantage.info}/>
-                )}
-            </ul>
+            <div className={classes.advantage__wrapper}>
+                <h2 className={classes.advantage__title}>Как это работает</h2>
+                <ul className={classes.advantage__list}>
+                    {advantageItems.map(advantage =>
+                        <AdvantagesItem index={advantage.index} className={advantage.className} info={advantage.info}/>
+                    )}
+                </ul>
+
+            </div>
         </section>
     );
 };
