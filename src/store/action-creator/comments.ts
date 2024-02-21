@@ -7,7 +7,12 @@ export const fetchComments = () => {
         try {
             dispatch({type: CommentsActionTypes.FETCH_COMMENTS});
 
-            const response = await axios.get(`https://jsonplaceholder.typicode.com/comments`)
+            const response = await axios.get(`https://jsonplaceholder.typicode.com/comments`, {
+                params: {
+                    _limit: 10,
+                    _page: 1
+                }
+            })
             dispatch({type: CommentsActionTypes.FETCH_COMMENTS_SUCCESS, payload: response.data})
         } catch (e) {
             console.log(e)
