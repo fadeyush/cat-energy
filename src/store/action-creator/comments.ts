@@ -9,7 +9,7 @@ export const fetchComments = () => {
 
             const response = await axios.get(`https://jsonplaceholder.typicode.com/comments`, {
                 params: {
-                    _limit: 10,
+                    _limit: 5,
                     _page: 1
                 }
             })

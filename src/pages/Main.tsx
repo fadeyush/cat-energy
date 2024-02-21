@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import PromoSection from '../components/PromoSection';
 import ProgramList from '../components/ProgramList';
 import Advantage from '../components/Advantage';
-import CommentsList from '../components/CommentsList';
+import Comments from '../components/Comments';
 
 const Main: FC = () => {
     return (
@@ -10,7 +10,7 @@ const Main: FC = () => {
            <PromoSection/>
            <ProgramList/>
            <Advantage/>
-           <CommentsList/>
+           <Comments/>
         </main>
     );
 };

@@ -1,5 +1,11 @@
+export interface CommentItemProps {
+    name: string;
+    body: string;
+    email: string;
+    postId: number;
+}
 export interface CommentsStateProps {
-    comments: any[],
+    comments: CommentItemProps[],
     loading: boolean,
     error: null | string,
 }
