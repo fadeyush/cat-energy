@@ -17,7 +17,7 @@ const Andvantage: FC = () => {
                 <h2 className={classes.advantage__title}>Как это работает</h2>
                 <ul className={classes.advantage__list}>
                     {advantageItems.map(advantage =>
-                        <AdvantagesItem index={advantage.index} className={advantage.className} info={advantage.info}/>
+                        <AdvantagesItem key={advantage.index} index={advantage.index} className={advantage.className} info={advantage.info}/>
                     )}
                 </ul>
 

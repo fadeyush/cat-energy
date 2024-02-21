@@ -15,7 +15,7 @@ const FooterMediaList: FC = () => {
     return (
         <ul className='footer-media__list'>
             {medias.map(media =>
-                <FooterMediaItem className={media.className} ikon={media.ikon} link={media.link} name={media.name}/>
+                <FooterMediaItem key={media.className} className={media.className} ikon={media.ikon} link={media.link} name={media.name}/>
             )}
         </ul>
     );

@@ -13,7 +13,7 @@ const ProgramList: FC = () => {
         <section className={classes.program}>
             <ul className={classes.program__list}>
                 {programItems.map(program=>
-                    <MainPageProgramItem info={program.info} className={program.className} catalogButtonName={program.catalogButtonName} catalogName={program.catalogName}/>
+                    <MainPageProgramItem key={program.className} info={program.info} className={program.className} catalogButtonName={program.catalogButtonName} catalogName={program.catalogName}/>
                 )}
             </ul>
         </section>
