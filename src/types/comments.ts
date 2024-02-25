@@ -37,3 +37,7 @@ interface AddComment {
 }
 
 export type CommentsAction = CommentsActionFetch | CommentsActionSuccess | CommentsActionErorr | AddComment;
+
+export interface AddCommentsProps {
+    setVisible: (e: boolean) => void;
+}

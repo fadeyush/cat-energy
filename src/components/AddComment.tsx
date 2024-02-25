@@ -3,12 +3,14 @@ import { useDispatch } from 'react-redux';
 import classes from '../styles/comments.module.scss';
 import MyButton from './UI/button/MyButton';
 import { buttonTypes } from '../types/button';
+import MyModal from './UI/modal/MyModal';
+import { AddCommentsProps } from '../types/comments';
 
-const AddComment: FC = () => {
+const AddComment: FC<AddCommentsProps> = ({setVisible}) => {
     const dispatch = useDispatch();
     const emailRef = useRef<HTMLInputElement>(null);
     const nameRef = useRef<HTMLInputElement>(null);
-    const bodyRef = useRef<HTMLInputElement>(null);
+    const bodyRef = useRef<HTMLTextAreaElement>(null);
 
     function addComment(e: React.MouseEvent<HTMLButtonElement>) {
         e.preventDefault();
@@ -26,14 +28,15 @@ const AddComment: FC = () => {
             nameRef!.current!.value! = '';
             emailRef!.current!.value! = '';
             bodyRef!.current!.value! = '';
+            setVisible(false);
         } else {
         }
       }
     return (
         <form className={classes.addComment__form}>
-            <input ref={emailRef} className={classes.addComment__email} type='text'></input>
-            <input ref={nameRef} className={classes.addComment__name} type='text'></input>
-            <input ref={bodyRef} className={classes.addComment__body} type='text'></input>
+            <input ref={emailRef} className={classes.addComment__email} type='email' placeholder='Ваш email'></input>
+            <input ref={nameRef} className={classes.addComment__name} type='text' placeholder='Заголовок'></input>
+            <textarea ref={bodyRef} className={classes.addComment__body} placeholder='Текст'></textarea>
             <MyButton colorType={buttonTypes.green} className={classes.addComment__submit} onClick={addComment}>add comment</MyButton>
         </form>
     );
