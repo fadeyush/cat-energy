@@ -6,6 +6,7 @@ import { buttonTypes } from '../types/button';
 import MyModal from './UI/modal/MyModal';
 import { AddCommentsProps } from '../types/comments';
 import MyInput from './UI/input/MyInput';
+import MyTextarea from './UI/textarea/MyTextarea';
 
 const AddComment: FC<AddCommentsProps> = ({setVisible}) => {
     const dispatch = useDispatch();
@@ -15,6 +16,7 @@ const AddComment: FC<AddCommentsProps> = ({setVisible}) => {
     const [modalError, setError] = useState<boolean>(false);
     const [emailErrorInput, setEmailErrorInput] = useState<boolean>(false);
     const [nameErrorInput, setNameErrorInput] = useState<boolean>(false);
+    const [bodyErrorInput, setBodyErrorInput] = useState<boolean>(false);
 
     function addComment(e: React.MouseEvent<HTMLButtonElement>) {
         e.preventDefault();
@@ -40,6 +42,9 @@ const AddComment: FC<AddCommentsProps> = ({setVisible}) => {
             if(!name) {
                 setNameErrorInput(true)
             }
+            if(!body) {
+                setBodyErrorInput(true)
+            }
             setError(true);
         }
     }
@@ -47,7 +52,7 @@ const AddComment: FC<AddCommentsProps> = ({setVisible}) => {
         <form className={classes.addComment__form}>
             <MyInput setError={setEmailErrorInput} isError={emailErrorInput} ref={emailRef} className={classes.addComment__email} type='email' placeholder='Ваш email*'/>
             <MyInput setError={setNameErrorInput} isError={nameErrorInput} ref={nameRef} className={classes.addComment__name} type='text' placeholder='Заголовок*'/>
-            <textarea ref={bodyRef} className={classes.addComment__body} placeholder='Текст*'></textarea>
+            <MyTextarea setError={setBodyErrorInput} isError={bodyErrorInput} ref={bodyRef} className={classes.addComment__body} placeholder='Текст*'/>
             <MyButton colorType={buttonTypes.green} className={classes.addComment__submit} onClick={addComment}>Добавить</MyButton>
             <MyModal visible={modalError} setVisible={setError}>Пожалуйста, заполните все поля формы!</MyModal>
         </form>

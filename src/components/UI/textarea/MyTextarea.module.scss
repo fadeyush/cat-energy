@@ -1,6 +1,6 @@
 @import '../../../styles/variables.scss';
 
-.myInput {
+.myTextaerea {
     border: 1px solid $inputBorder;
     box-sizing: border-box;
     font-family: $font-family-base;
@@ -10,14 +10,14 @@
     padding: 5px 15px;
 }
 
-.myInput:hover:not(.myInput__error) {
+.myTextaerea:hover:not(.myTextaerea__error)  {
     border: 1px solid $inputBorderHover;
 }
 
-.myInput:active {
+.myTextaerea:active  {
     border: 1px solid $inputBorderActive;
 }
 
-.myInput__error {
+.myTextaerea__error  {
     border: 1px solid $inputBorderError;
 }
