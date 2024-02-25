@@ -4,7 +4,7 @@ import classes from '../styles/comments.module.scss';
 import MyButton from './UI/button/MyButton';
 import { buttonTypes } from '../types/button';
 import MyModal from './UI/modal/MyModal';
-import { AddCommentsProps } from '../types/comments';
+import { AddCommentsProps, CommentItemProps } from '../types/comments';
 import MyInput from './UI/input/MyInput';
 import MyTextarea from './UI/textarea/MyTextarea';
 
@@ -24,7 +24,7 @@ const AddComment: FC<AddCommentsProps> = ({setVisible}) => {
         const name = nameRef.current?.value;
         const body = bodyRef.current?.value;
         if (name && body && email) {
-            const comment = {
+            const comment: CommentItemProps = {
                 name: name,
                 body: body,
                 email: email,
