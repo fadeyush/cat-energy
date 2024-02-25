@@ -5,6 +5,7 @@ import MyButton from './UI/button/MyButton';
 import { buttonTypes } from '../types/button';
 import MyModal from './UI/modal/MyModal';
 import { AddCommentsProps } from '../types/comments';
+import MyInput from './UI/input/MyInput';
 
 const AddComment: FC<AddCommentsProps> = ({setVisible}) => {
     const dispatch = useDispatch();
@@ -12,6 +13,8 @@ const AddComment: FC<AddCommentsProps> = ({setVisible}) => {
     const nameRef = useRef<HTMLInputElement>(null);
     const bodyRef = useRef<HTMLTextAreaElement>(null);
     const [modalError, setError] = useState<boolean>(false);
+    const [emailErrorInput, setEmailErrorInput] = useState<boolean>(false);
+    const [nameErrorInput, setNameErrorInput] = useState<boolean>(false);
 
     function addComment(e: React.MouseEvent<HTMLButtonElement>) {
         e.preventDefault();
@@ -31,15 +34,21 @@ const AddComment: FC<AddCommentsProps> = ({setVisible}) => {
             bodyRef!.current!.value! = '';
             setVisible(false);
         } else {
+            if(!email) {
+                setEmailErrorInput(true)
+            }
+            if(!name) {
+                setNameErrorInput(true)
+            }
             setError(true);
         }
-      }
+    }
     return (
         <form className={classes.addComment__form}>
-            <input ref={emailRef} className={classes.addComment__email} type='email' placeholder='Ваш email*'></input>
-            <input ref={nameRef} className={classes.addComment__name} type='text' placeholder='Заголовок*'></input>
+            <MyInput setError={setEmailErrorInput} isError={emailErrorInput} ref={emailRef} className={classes.addComment__email} type='email' placeholder='Ваш email*'/>
+            <MyInput setError={setNameErrorInput} isError={nameErrorInput} ref={nameRef} className={classes.addComment__name} type='text' placeholder='Заголовок*'/>
             <textarea ref={bodyRef} className={classes.addComment__body} placeholder='Текст*'></textarea>
-            <MyButton colorType={buttonTypes.green} className={classes.addComment__submit} onClick={addComment}>add comment</MyButton>
+            <MyButton colorType={buttonTypes.green} className={classes.addComment__submit} onClick={addComment}>Добавить</MyButton>
             <MyModal visible={modalError} setVisible={setError}>Пожалуйста, заполните все поля формы!</MyModal>
         </form>
     );

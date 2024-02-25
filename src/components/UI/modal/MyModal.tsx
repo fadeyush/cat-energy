@@ -7,12 +7,12 @@ const MyModal: FC<ModalProps> = ({children, visible, setVisible, className}) => 
     const rootClasses = [classes.myModal];
 
     if(visible) {
-        rootClasses.push(classes.active)
+        rootClasses.push(classes.myModal__active)
     }
     
     return (
         <div className={rootClasses.join(' ')} onClick={e=>setVisible(false)}>
-            <div className={`${classes.myModalContent} ${className}`} onClick={e=>e.stopPropagation()}>
+            <div className={`${classes.myModal__content} ${className}`} onClick={e=>e.stopPropagation()}>
                 {children}
             </div>
         </div>

@@ -1,0 +1,22 @@
+@import '../../../styles/variables.scss';
+
+.myInput {
+    border: 1px solid $inputBorder;
+    box-sizing: border-box;
+    font-family: $font-family-base;
+
+    font-size: 16px;
+    padding: 5px 15px;
+}
+
+.myInput:hover:not(.myInput__error) {
+    border: 1px solid $inputBorderHover;
+}
+
+.myInput:active {
+    border: 1px solid $inputBorderActive;
+}
+
+.myInput__error {
+    border: 1px solid $inputBorderError;
+}
