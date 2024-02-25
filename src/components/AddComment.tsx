@@ -11,6 +11,7 @@ const AddComment: FC<AddCommentsProps> = ({setVisible}) => {
     const emailRef = useRef<HTMLInputElement>(null);
     const nameRef = useRef<HTMLInputElement>(null);
     const bodyRef = useRef<HTMLTextAreaElement>(null);
+    const [modalError, setError] = useState<boolean>(false);
 
     function addComment(e: React.MouseEvent<HTMLButtonElement>) {
         e.preventDefault();
@@ -30,14 +31,16 @@ const AddComment: FC<AddCommentsProps> = ({setVisible}) => {
             bodyRef!.current!.value! = '';
             setVisible(false);
         } else {
+            setError(true);
         }
       }
     return (
         <form className={classes.addComment__form}>
-            <input ref={emailRef} className={classes.addComment__email} type='email' placeholder='Ваш email'></input>
-            <input ref={nameRef} className={classes.addComment__name} type='text' placeholder='Заголовок'></input>
-            <textarea ref={bodyRef} className={classes.addComment__body} placeholder='Текст'></textarea>
+            <input ref={emailRef} className={classes.addComment__email} type='email' placeholder='Ваш email*'></input>
+            <input ref={nameRef} className={classes.addComment__name} type='text' placeholder='Заголовок*'></input>
+            <textarea ref={bodyRef} className={classes.addComment__body} placeholder='Текст*'></textarea>
             <MyButton colorType={buttonTypes.green} className={classes.addComment__submit} onClick={addComment}>add comment</MyButton>
+            <MyModal visible={modalError} setVisible={setError}>Пожалуйста, заполните все поля формы!</MyModal>
         </form>
     );
 };

@@ -9,6 +9,7 @@ const MyModal: FC<ModalProps> = ({children, visible, setVisible, className}) => 
     if(visible) {
         rootClasses.push(classes.active)
     }
+    
     return (
         <div className={rootClasses.join(' ')} onClick={e=>setVisible(false)}>
             <div className={`${classes.myModalContent} ${className}`} onClick={e=>e.stopPropagation()}>
