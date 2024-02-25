@@ -14,6 +14,8 @@ export const commentsReducer = (state = inittialState, action: CommentsAction): 
             return {...state, loading: false, comments: action.payload}
         case CommentsActionTypes.FETCH_COMMENTS_ERROR:  
             return {...state, loading: false, error: action.payload}
+        case CommentsActionTypes.ADD_COMMENT:  
+            return {...state, loading: false, comments: [...state.comments, action.payload]}
         default:
             return state
     }

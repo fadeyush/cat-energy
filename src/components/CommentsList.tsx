@@ -14,17 +14,17 @@ const CommentsList: FC = () => {
     }, [])
 
     if(loading) {
-        return <h1>Идет загрузка...</h1>
+        return <h2>Идет загрузка...</h2>
     }
 
     if(error) {
-        return <h1>{error}</h1>
+        return <h2>{error}</h2>
     }
 
     return (
         <ul className={classes.comments__list}>
             {comments.map(comment=>
-                <CommentItem body={comment.body} email={comment.email} name={comment.name} key={comment.postId} postId={comment.postId}/>
+                <CommentItem body={comment.body} email={comment.email} name={comment.name} key={comment.id} id={comment.id}/>
             )}
         </ul>
     );

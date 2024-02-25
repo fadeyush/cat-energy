@@ -2,7 +2,7 @@ export interface CommentItemProps {
     name: string;
     body: string;
     email: string;
-    postId: number;
+    id: number;
 }
 export interface CommentsStateProps {
     comments: CommentItemProps[],
@@ -13,7 +13,8 @@ export interface CommentsStateProps {
 export enum CommentsActionTypes {
     FETCH_COMMENTS = 'FETCH_COMMENTS',
     FETCH_COMMENTS_SUCCESS= 'FETCH_COMMENTS_SUCCESS',
-    FETCH_COMMENTS_ERROR = 'FETCH_COMMENTS_ERROR'
+    FETCH_COMMENTS_ERROR = 'FETCH_COMMENTS_ERROR',
+    ADD_COMMENT = 'ADD_COMMENT',
 }
 
 interface CommentsActionFetch {
@@ -30,4 +31,9 @@ interface CommentsActionErorr {
     payload: string,
 }
 
-export type CommentsAction = CommentsActionFetch | CommentsActionSuccess | CommentsActionErorr;
+interface AddComment {
+    type: CommentsActionTypes.ADD_COMMENT;
+    payload: CommentItemProps,
+}
+
+export type CommentsAction = CommentsActionFetch | CommentsActionSuccess | CommentsActionErorr | AddComment;
