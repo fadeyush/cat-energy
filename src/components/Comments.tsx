@@ -14,7 +14,7 @@ const Comments: FC = () => {
             <h2 className={classes.comments__title}>Отзывы наших клиентов</h2>
             <CommentsList/>
             <MyButton className={classes.comments__button} onClick={()=>setReview(true)} colorType={buttonTypes.green}>Добавить отзыв</MyButton>
-            <MyModal className={classes.addComment__wrapper} visible={modalReview} setVisible={setReview}><AddComment setVisible={setReview}/></MyModal>
+            <MyModal className={classes.addComment__wrapper} visible={modalReview} setVisible={setReview}><AddComment visible={modalReview} setVisible={setReview}/></MyModal>
         </section>
     );
 };

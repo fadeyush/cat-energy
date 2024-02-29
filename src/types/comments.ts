@@ -40,4 +40,5 @@ export type CommentsAction = CommentsActionFetch | CommentsActionSuccess | Comme
 
 export interface AddCommentsProps {
     setVisible: (e: boolean) => void;
+    visible: boolean;
 }

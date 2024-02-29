@@ -8,7 +8,7 @@ import { AddCommentsProps, CommentItemProps } from '../types/comments';
 import MyInput from './UI/input/MyInput';
 import MyTextarea from './UI/textarea/MyTextarea';
 
-const AddComment: FC<AddCommentsProps> = ({setVisible}) => {
+const AddComment: FC<AddCommentsProps> = ({setVisible, visible}) => {
     const dispatch = useDispatch();
     const emailRef = useRef<HTMLInputElement>(null);
     const nameRef = useRef<HTMLInputElement>(null);
@@ -48,6 +48,13 @@ const AddComment: FC<AddCommentsProps> = ({setVisible}) => {
             setError(true);
         }
     }
+
+    if (!visible && nameRef.current && emailRef.current &&  bodyRef.current) {
+        nameRef!.current!.value! = '';
+        emailRef!.current!.value! = '';
+        bodyRef!.current!.value! = '';
+    }
+
     return (
         <form className={classes.addComment__form}>
             <MyInput setError={setEmailErrorInput} isError={emailErrorInput} ref={emailRef} className={classes.addComment__email} type='email' placeholder='Ваш email*'/>
