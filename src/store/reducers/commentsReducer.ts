@@ -1,9 +1,14 @@
-import { CommentsStateProps, CommentsAction, CommentsActionTypes } from "../../types/comments";
+import { CommentsStateProps, CommentsAction, CommentsActionTypes, CommentItemProps } from "../../types/comments";
 
 const inittialState: CommentsStateProps = {
     comments: [],
     loading: false,
     error: null,
+}
+
+const addNewComment = (commentsArr: CommentItemProps[], newComment: CommentItemProps) => {
+    commentsArr.unshift(newComment);
+    return commentsArr;
 }
 
 export const commentsReducer = (state = inittialState, action: CommentsAction): CommentsStateProps => {
@@ -15,7 +20,7 @@ export const commentsReducer = (state = inittialState, action: CommentsAction): 
         case CommentsActionTypes.FETCH_COMMENTS_ERROR:  
             return {...state, loading: false, error: action.payload}
         case CommentsActionTypes.ADD_COMMENT:  
-            return {...state, loading: false, comments: [...state.comments, action.payload]}
+            return {...state, loading: false, comments: addNewComment(state.comments, action.payload)}
         default:
             return state
     }
