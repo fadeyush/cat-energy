@@ -4,11 +4,8 @@ const inittialState: CommentsStateProps = {
     comments: [],
     loading: false,
     error: null,
-}
-
-const addNewComment = (commentsArr: CommentItemProps[], newComment: CommentItemProps) => {
-    commentsArr.unshift(newComment);
-    return commentsArr;
+    page: 1,
+    limit: 10,
 }
 
 export const commentsReducer = (state = inittialState, action: CommentsAction): CommentsStateProps => {
@@ -20,7 +17,9 @@ export const commentsReducer = (state = inittialState, action: CommentsAction): 
         case CommentsActionTypes.FETCH_COMMENTS_ERROR:  
             return {...state, loading: false, error: action.payload}
         case CommentsActionTypes.ADD_COMMENT:  
-            return {...state, loading: false, comments: addNewComment(state.comments, action.payload)}
+            return {...state, loading: false, comments: [action.payload, ...state.comments]}
+        case CommentsActionTypes.SET_COMMENTS_PAGE:  
+            return {...state, page: action.payload }
         default:
             return state
     }

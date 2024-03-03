@@ -5,6 +5,7 @@ import PageHeaderNavigation from './components/PageHeaderNavigation';
 import Footer from './components/Footer';
 import { useResize } from './hooks/useResize';
 import { useDispatch } from 'react-redux';
+
 function App() {
   const deviceSize: number = useResize();
   const dispatch = useDispatch();

@@ -8,13 +8,16 @@ export interface CommentsStateProps {
     comments: CommentItemProps[],
     loading: boolean,
     error: null | string,
+    page: number;
+    limit: number;
 }
 
 export enum CommentsActionTypes {
     FETCH_COMMENTS = 'FETCH_COMMENTS',
     FETCH_COMMENTS_SUCCESS= 'FETCH_COMMENTS_SUCCESS',
     FETCH_COMMENTS_ERROR = 'FETCH_COMMENTS_ERROR',
-    ADD_COMMENT = 'ADD_COMMENT',
+    SET_COMMENTS_PAGE = 'SET_COMMENTS_PAGE',
+    ADD_COMMENT = 'ADD_COMMENT'
 }
 
 interface CommentsActionFetch {
@@ -31,12 +34,18 @@ interface CommentsActionErorr {
     payload: string,
 }
 
+interface SetTodoPage {
+    type: CommentsActionTypes.SET_COMMENTS_PAGE;
+    payload: number;
+}
+
+
 interface AddComment {
     type: CommentsActionTypes.ADD_COMMENT;
     payload: CommentItemProps,
 }
 
-export type CommentsAction = CommentsActionFetch | CommentsActionSuccess | CommentsActionErorr | AddComment;
+export type CommentsAction = CommentsActionFetch | CommentsActionSuccess | CommentsActionErorr | SetTodoPage | AddComment;
 
 export interface AddCommentsProps {
     setVisible: (e: boolean) => void;
