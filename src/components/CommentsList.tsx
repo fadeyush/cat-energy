@@ -5,6 +5,7 @@ import { fetchComments, setCommentsPage } from '../store/action-creator/comments
 import CommentItem from './CommentItem';
 import classes from '../styles/comments.module.scss';
 import { CommentItemProps } from '../types/comments';
+import MyLoader from './UI/loader/MyLoader';
 
 const CommentsList: FC = () => {
     const {error, comments, loading, page, limit} = useTypedSelector(state => state.comments);
@@ -21,7 +22,7 @@ const CommentsList: FC = () => {
     }, [comments]);
 
     if(loading) {
-        return (<div className={classes.commentsList__wrapper}><h2>Идет загрузка...</h2></div>)
+        return (<div className={classes.commentsList__wrapper}><MyLoader/></div>)
     }
 
     if(error) {
