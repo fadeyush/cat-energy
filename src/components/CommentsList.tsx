@@ -21,25 +21,28 @@ const CommentsList: FC = () => {
     }, [comments]);
 
     if(loading) {
-        return <h2>Идет загрузка...</h2>
+        return (<div className={classes.commentsList__wrapper}><h2>Идет загрузка...</h2></div>)
     }
 
     if(error) {
-        return <h2>{error}</h2>
+        return (<div className={classes.commentsList__wrapper}><h2>{error}</h2></div>);
     }
 
     return (
-        <ul className={classes.comments__list}>
-            {commentInterface.map(comment=>
-                <CommentItem body={comment.body} email={comment.email} name={comment.name} key={comment.id} id={comment.id}/>
-            )}
-            <div style={{display: 'flex'}}>
+        <div className={classes.commentsList__wrapper}>
+            <ul className={classes.comments__list}>
+                {commentInterface.map(comment=>
+                    <CommentItem body={comment.body} email={comment.email} name={comment.name} key={comment.id} id={comment.id}/>
+                )}
+            </ul>
+
+            <div className={classes.pagination__list}>
                 {pages.map(p=>
-                    <div onClick={()=>dispatch(setCommentsPage(p))} key={p} style={{padding: '5px', border: page==p  ? 'none' : '1px solid #68b738', backgroundClip: page==p  ? '#68b738' : 'white' }}>{p}</div>
+                    <button onClick={()=>dispatch(setCommentsPage(p))} key={p} className={page==p ? classes.pagination__buttonActive : classes.pagination__button}><p className='visually-hidden'>{p}</p></button>
                 )}
             </div>
-        </ul>
-    );
+        </div>
+        );
 };
 
 export default CommentsList;
