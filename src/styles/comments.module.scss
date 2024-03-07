@@ -27,10 +27,65 @@
 .commentItem {
     border-bottom: 1px solid $borderFooter;
     padding: 15px 0;
+    position: relative;
 
-    p {
+    p:not(.deleteComment__info) {
         margin: 0;
     }
+}
+
+.commentItem__delete {
+    display: none;
+}
+
+.commentItem__deleteActive {
+    border: none;
+    background-color: transparent;
+
+    position: absolute;
+    top: 25px;
+    right: 15px;
+
+    cursor: pointer;
+
+    span::before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 2px;
+        transform: rotate(45deg);
+        background-color: $mainTextColor;
+    }
+
+    span::after {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 2px;
+        transform: rotate(-45deg);
+        background-color: $mainTextColor;
+    }
+}
+
+.deleteComment__wrapper {
+    z-index: 1;
+}
+
+.deleteComment__body {
+    min-height: 50px;
+}
+
+.deleteComment__info {
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.deleteComment__delete,
+.deleteComment__cancel {
+    height: 30px;
+    width: 35%;
+    margin-right: 20px;
 }
 
 .commentItem:last-child {

@@ -28,7 +28,8 @@ const AddComment: FC<AddCommentsProps> = ({setVisible, visible}) => {
                 name: name,
                 body: body,
                 email: email,
-                id: Date.now()
+                id: Date.now(),
+                isUser: true
             }
             dispatch({type: "ADD_COMMENT", payload: comment});
             nameRef!.current!.value! = '';

@@ -3,6 +3,7 @@ export interface CommentItemProps {
     body: string;
     email: string;
     id: number;
+    isUser: boolean;
 }
 export interface CommentsStateProps {
     comments: CommentItemProps[],
@@ -17,7 +18,8 @@ export enum CommentsActionTypes {
     FETCH_COMMENTS_SUCCESS= 'FETCH_COMMENTS_SUCCESS',
     FETCH_COMMENTS_ERROR = 'FETCH_COMMENTS_ERROR',
     SET_COMMENTS_PAGE = 'SET_COMMENTS_PAGE',
-    ADD_COMMENT = 'ADD_COMMENT'
+    ADD_COMMENT = 'ADD_COMMENT',
+    DELETE_COMMENT = 'DELETE_COMMENT'
 }
 
 interface CommentsActionFetch {
@@ -26,7 +28,7 @@ interface CommentsActionFetch {
 
 interface CommentsActionSuccess {
     type: CommentsActionTypes.FETCH_COMMENTS_SUCCESS;
-    payload: any[],
+    payload: CommentItemProps[],
 }
 
 interface CommentsActionErorr {
@@ -39,13 +41,17 @@ interface SetTodoPage {
     payload: number;
 }
 
-
 interface AddComment {
     type: CommentsActionTypes.ADD_COMMENT;
     payload: CommentItemProps,
 }
 
-export type CommentsAction = CommentsActionFetch | CommentsActionSuccess | CommentsActionErorr | SetTodoPage | AddComment;
+interface DeleteComment {
+    type: CommentsActionTypes.DELETE_COMMENT;
+    payload: number,
+}
+
+export type CommentsAction = CommentsActionFetch | CommentsActionSuccess | CommentsActionErorr | SetTodoPage | AddComment | DeleteComment;
 
 export interface AddCommentsProps {
     setVisible: (e: boolean) => void;

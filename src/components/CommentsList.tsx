@@ -33,7 +33,7 @@ const CommentsList: FC = () => {
         <div className={classes.commentsList__wrapper}>
             <ul className={classes.comments__list}>
                 {commentInterface.map(comment=>
-                    <CommentItem body={comment.body} email={comment.email} name={comment.name} key={comment.id} id={comment.id}/>
+                    <CommentItem isUser={comment.isUser} body={comment.body} email={comment.email} name={comment.name} key={comment.id} id={comment.id}/>
                 )}
             </ul>
 

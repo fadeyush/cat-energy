@@ -1,4 +1,4 @@
-import { CommentsStateProps, CommentsAction, CommentsActionTypes, CommentItemProps } from "../../types/comments";
+import { CommentsStateProps, CommentsAction, CommentsActionTypes } from "../../types/comments";
 
 const inittialState: CommentsStateProps = {
     comments: [],
@@ -20,6 +20,8 @@ export const commentsReducer = (state = inittialState, action: CommentsAction): 
             return {...state, loading: false, comments: [action.payload, ...state.comments]}
         case CommentsActionTypes.SET_COMMENTS_PAGE:  
             return {...state, page: action.payload }
+        case CommentsActionTypes.DELETE_COMMENT:
+            return {...state, comments: state.comments.filter(comment => comment.id !== action.payload) }
         default:
             return state
     }
