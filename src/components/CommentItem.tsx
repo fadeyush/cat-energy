@@ -17,7 +17,7 @@ const CommentItem: FC<CommentItemProps> = ({name, body, email, isUser, id}) => {
              ?
              <div>
                 <button onClick={()=>setDeleteComment(true)} className={classes.commentItem__deleteActive}><span></span></button>
-                <MyModal className={classes.deleteComment__wrapper} visible={modalDeleteComment} setVisible={setDeleteComment}>
+                <MyModal visible={modalDeleteComment} setVisible={setDeleteComment}>
                     <DeleteComment setVisible={setDeleteComment} commentId={id}/>
                 </MyModal>
              </div>

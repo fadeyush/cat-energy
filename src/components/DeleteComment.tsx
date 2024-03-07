@@ -18,7 +18,7 @@ const DeleteComment: FC<DeleteCommentProps> = ({commentId, setVisible}) => {
     }
 
     return (
-        <div className={classes.deleteComment__body}>
+        <div>
             <p className={classes.deleteComment__info}>Вы действительно хотите удалить свой отзыв?</p>
             <MyButton onClick={()=>removeCustomer(commentId)} className={classes.deleteComment__delete} colorType={buttonTypes.green}>Удалить</MyButton>
             <MyButton onClick={()=>setVisible(false)} className={classes.deleteComment__cancel} colorType={buttonTypes.gray}>Отменить</MyButton>
