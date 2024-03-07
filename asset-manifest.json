@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cat-energy/static/css/main.df1ed6ed.css",
-    "main.js": "/cat-energy/static/js/main.a72ee4c4.js",
+    "main.css": "/cat-energy/static/css/main.71e69806.css",
+    "main.js": "/cat-energy/static/js/main.5bac9b1c.js",
     "static/media/index-can-desktop@2x.png": "/cat-energy/static/media/index-can-desktop@2x.36f7e0e09e06b5b9727f.png",
     "static/media/index-can-tablet@2x.jpg": "/cat-energy/static/media/index-can-tablet@2x.d1185b04eafcae39a60b.jpg",
     "static/media/index-can-mobile@2x.png": "/cat-energy/static/media/index-can-mobile@2x.379c03ad02db2a1b4d60.png",
@@ -29,11 +29,11 @@
     "index.html": "/cat-energy/index.html",
     "static/media/icon-right-arrow-long.svg": "/cat-energy/static/media/icon-right-arrow-long.69f6df10daa7b5fe326c.svg",
     "static/media/icon-right-arrow-verylong.svg": "/cat-energy/static/media/icon-right-arrow-verylong.305fb76a475dde14f79c.svg",
-    "main.df1ed6ed.css.map": "/cat-energy/static/css/main.df1ed6ed.css.map",
-    "main.a72ee4c4.js.map": "/cat-energy/static/js/main.a72ee4c4.js.map"
+    "main.71e69806.css.map": "/cat-energy/static/css/main.71e69806.css.map",
+    "main.5bac9b1c.js.map": "/cat-energy/static/js/main.5bac9b1c.js.map"
   },
   "entrypoints": [
-    "static/css/main.df1ed6ed.css",
-    "static/js/main.a72ee4c4.js"
+    "static/css/main.71e69806.css",
+    "static/js/main.5bac9b1c.js"
   ]
 }
