@@ -1,0 +1,150 @@
+@import './variables.scss';
+
+.commentItem {
+    border-bottom: 1px solid $borderFooter;
+    padding: 15px 0;
+    position: relative;
+
+    p:not(.deleteComment__info) {
+        margin: 0;
+    }
+}
+
+
+.commentItem__deleteActive {
+    border: none;
+    background-color: transparent;
+
+    position: absolute;
+    top: 25px;
+    right: 15px;
+
+    cursor: pointer;
+
+    span::before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 2px;
+        transform: rotate(45deg);
+        background-color: $mainTextColor;
+    }
+
+    span::after {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 2px;
+        transform: rotate(-45deg);
+        background-color: $mainTextColor;
+    }
+}
+
+.commentItem:last-child {
+    border: none;
+}
+
+.commentItem__title {
+    color: $textColorBlack;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-left: 55px;
+    
+    position: relative;
+}
+
+.commentItem__title::after {
+    position: absolute;
+    content: '';
+
+    top: 0;
+    left: 0;
+
+    width: 50px;
+    height: 50px;
+
+    background-image: url('../assets/img/icon-profile.png');
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+}
+
+.commentItem__author {
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 55px;
+}
+
+.commentItem__body {
+    font-family: 'Arial';
+    padding-left: 10px;
+
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+@media (min-width: $tablet-width) {
+    
+    .commentItem {
+        padding: 25px 0;
+    }
+    
+    .commentItem__deleteActive {
+        top: 25px;
+        right: 25px;
+
+        span::before {
+            width: 30px;
+        }
+
+        span::after {
+            width: 30px;
+        }
+    }
+
+    .commentItem__title {
+        font-size: 26px;
+        padding-left: 65px;
+    }
+    
+    .commentItem__title::after {
+        width: 60px;
+        height: 60px;
+        background-size: 60px 60px;
+    }
+    
+    .commentItem__author {
+        margin-bottom: 20px;
+        padding-left: 65px;
+        font-size: 16px;
+        margin-top: 5px;
+    }
+    
+    .commentItem__body {
+        font-size: 16px;
+    }
+    
+}
+
+@media (min-width: $desktop-width) {
+    .commentItem {
+        border: none;
+        width: 45%;
+    }
+    
+    .commentItem__deleteActive {
+        top: 35px;
+        right: 25px;
+
+        span::before {
+            width: 25px;
+        }
+
+        span::after {
+            width: 25px;
+        }
+    }
+}

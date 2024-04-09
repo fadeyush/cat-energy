@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import classes from '../styles/advantage.module.scss';
-import { AdvantagesItemsProps } from '../types/advantage';
+import classes from './AdvantagesItem.module.scss';
+import { AdvantagesItemsProps } from '../../types/advantage';
 
 
 const AdvantagesItem: FC<AdvantagesItemsProps> = ({info, className, index}) => {

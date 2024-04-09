@@ -1,12 +1,12 @@
 import React, { FC, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import classes from '../styles/comments.module.scss';
-import MyButton from './UI/button/MyButton';
-import { buttonTypes } from '../types/button';
-import MyModal from './UI/modal/MyModal';
-import { AddCommentsProps, CommentItemProps } from '../types/comments';
-import MyInput from './UI/input/MyInput';
-import MyTextarea from './UI/textarea/MyTextarea';
+import classes from './comments.module.scss';
+import MyButton from '../UI/button/MyButton';
+import { buttonTypes } from '../../types/button'; 
+import MyModal from '../UI/modal/MyModal';
+import { AddCommentsProps, CommentItemProps } from '../../types/comments';
+import MyInput from '../UI/input/MyInput';
+import MyTextarea from '../UI/textarea/MyTextarea';
 
 const AddComment: FC<AddCommentsProps> = ({setVisible, visible}) => {
     const dispatch = useDispatch();

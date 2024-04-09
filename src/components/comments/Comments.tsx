@@ -1,10 +1,10 @@
 import React, { FC, useState } from 'react';
-import classes from '../styles/comments.module.scss';
-import CommentsList from './CommentsList';
-import AddComment from './AddComment';
-import MyButton from './UI/button/MyButton';
-import { buttonTypes } from '../types/button';
-import MyModal from './UI/modal/MyModal';
+import classes from './Comments.module.scss';
+import CommentsList from '../commentsList/CommentsList';
+import AddComment from '../addComment/AddComment';
+import MyButton from '../UI/button/MyButton';
+import { buttonTypes } from '../../types/button';
+import MyModal from '../UI/modal/MyModal';
 
 const Comments: FC = () => {
     const [modalReview, setReview] = useState<boolean>(false);

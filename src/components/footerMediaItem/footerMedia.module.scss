@@ -1,0 +1,51 @@
+@import './variables.scss';
+
+.footerMedia__ikon {
+    box-sizing: border-box;
+    &--vk * {
+        width: 22px;
+        height: 12px;
+    }
+
+    &--ig * {
+        width: 16px;
+        height: 16px;
+    }
+
+    &--fb * {
+        width: 10px;
+        height: 19px;
+    }
+
+    &:hover * {
+        fill: $buttonGreen;
+    }
+    &:active * {
+        fill: $buttonGreen;
+        opacity: 0.8;
+    }
+}
+
+.footerMedia__ikon * {
+    fill: $footerMediaIkonColor;
+}
+
+
+@media (min-width: $tablet-width) {
+    .footerMedia__ikon{
+        &--vk * {
+            width: 30px;
+            height: 16px;
+        }
+    
+        &--ig * {
+            width: 23px;
+            height: 23px;
+        }
+    
+        &--fb * {
+            width: 14px;
+            height: 28px;
+        }
+    }
+}

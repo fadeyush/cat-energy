@@ -1,9 +1,8 @@
 import React, { FC, useState } from 'react';
-import { CommentItemProps } from '../types/comments';
-import classes from '../styles/comments.module.scss';
-import { useDispatch } from 'react-redux';
-import MyModal from './UI/modal/MyModal';
-import DeleteComment from './DeleteComment';
+import { CommentItemProps } from '../../types/comments';
+import classes from './CommentItem.module.scss';
+import MyModal from '../UI/modal/MyModal';
+import DeleteComment from '../deleteComment/DeleteComment';
 
 const CommentItem: FC<CommentItemProps> = ({name, body, email, isUser, id}) => {
     const [modalDeleteComment, setDeleteComment] = useState<boolean>(false);

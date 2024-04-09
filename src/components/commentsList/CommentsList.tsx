@@ -1,11 +1,11 @@
 import React, { FC, useEffect, useMemo, useState } from 'react';
-import { useTypedSelector } from '../hooks/useTypedSelector';
+import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useDispatch } from 'react-redux';
-import { fetchComments, setCommentsPage } from '../store/action-creator/comments';
-import CommentItem from './CommentItem';
-import classes from '../styles/comments.module.scss';
-import { CommentItemProps } from '../types/comments';
-import MyLoader from './UI/loader/MyLoader';
+import { fetchComments, setCommentsPage } from '../../store/action-creator/comments';
+import CommentItem from '../commentItem/CommentItem';
+import classes from './CommentsList.module.scss';
+import { CommentItemProps } from '../../types/comments';
+import MyLoader from '../UI/loader/MyLoader';
 
 const CommentsList: FC = () => {
     const {error, comments, loading, page, limit} = useTypedSelector(state => state.comments);

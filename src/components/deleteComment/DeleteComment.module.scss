@@ -1,0 +1,38 @@
+@import './variables.scss';
+
+.commentItem__delete {
+    display: none;
+}
+
+.deleteComment__info {
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.deleteComment__delete,
+.deleteComment__cancel {
+    height: 30px;
+    width: 35%;
+}
+
+.deleteComment__delete {
+    margin-right: 25px;
+}
+
+@media (min-width: $tablet-width) {
+    .deleteComment__info {
+        font-size: 24px;
+        margin-bottom: 50px;
+    }
+
+    .deleteComment__delete,
+    .deleteComment__cancel {
+        height: 40px;
+        width: 40%;
+    }
+
+    .deleteComment__delete {
+        margin-right: 30px;
+    }
+}

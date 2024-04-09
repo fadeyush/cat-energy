@@ -1,0 +1,49 @@
+@import './variables.scss';
+
+.footerCopyright {
+    box-sizing: border-box;
+    display: flex;
+    padding: 20px 15% 14px;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+
+    .footerCopyright__info {
+        font-size: 16px;
+        font-weight: 400;
+        font-family: 'Arial';
+        color: #444444;
+    }
+    
+    .footerCopyright__logo * {
+        fill: $footerMediaIkonColor;
+    }
+
+    &:hover {
+        .footerCopyright__info {
+            color: $buttonGreen;
+        }
+        .footerCopyright__logo * {
+            fill: $buttonGreen;
+        }
+    } 
+
+    &:active {
+        .footerCopyright__info {
+            color: $buttonGreen;
+            opacity: 0.8;
+        }
+        .ffooterCopyright__logo * {
+            fill: $buttonGreen;
+            opacity: 0.8;
+        }
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .footerCopyright {
+        width: 162px;
+        height: 34px;
+        padding: 0;
+    }
+}

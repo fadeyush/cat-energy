@@ -1,0 +1,21 @@
+@import './variables.scss';
+.addComment__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.addComment__submit {
+    height: 40px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+    .addComment__submit {
+        width: 40%;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+

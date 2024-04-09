@@ -1,6 +1,6 @@
 @import './variables.scss';
 
-.logo-footer__wrapper {
+.logoFooter__wrapper {
     width: 100%;
     border-bottom: 1px solid $borderFooter;
     display: block;
@@ -10,25 +10,24 @@
     box-sizing: border-box;
 }
 
-.logo-footer {
+.logoFooter {
     box-sizing: border-box;
     width: 128px;
     height: 24px;
 
     display: block;
     margin: 0 auto;
-}
 
-.logo-footer:hover *  {
-    opacity: 0.9;
-}
-
-.logo-footer:active *  {
-    opacity: 0.8;
+    &:hover *  {
+        opacity: 0.9;
+    }
+    &:active *  {
+        opacity: 0.8;
+    }
 }
 
 @media (min-width: $tablet-width) {
-    .logo-footer__wrapper {
+    .logoFooter__wrapper {
         border: none;
         width: 132px;
         padding: 0;
@@ -37,7 +36,7 @@
 }
 
 @media (min-width: $desktop-width) {
-    .logo-footer__wrapper {
+    .logoFooter__wrapper {
         width: 128px;
     }
 }

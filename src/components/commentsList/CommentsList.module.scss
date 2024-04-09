@@ -1,0 +1,29 @@
+@import './variables.scss';
+
+.comments__list {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    height: 295px;
+}
+
+
+@media (min-width: $tablet-width) {
+    .commentsList__wrapper {
+        height: 400px;
+    }
+    
+    .comments__list {
+        height: 370px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .comments__list {
+        height: 207px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+}

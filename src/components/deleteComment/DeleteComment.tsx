@@ -1,13 +1,10 @@
 import React, { FC } from 'react';
 import { useDispatch } from 'react-redux';
-import MyButton from './UI/button/MyButton';
-import { buttonTypes } from '../types/button';
-import classes from '../styles/comments.module.scss';
+import MyButton from '../UI/button/MyButton';
+import { buttonTypes } from '../../types/button';
+import classes from './DeleteComment.module.scss';
+import { DeleteCommentProps } from '../../types/comments';
 
-interface DeleteCommentProps {
-    commentId: number;
-    setVisible: (e: boolean) => void;
-}
 
 const DeleteComment: FC<DeleteCommentProps> = ({commentId, setVisible}) => {
     const dispatch = useDispatch();

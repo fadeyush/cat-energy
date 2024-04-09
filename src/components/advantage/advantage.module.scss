@@ -1,0 +1,64 @@
+@import './variables.scss';
+.advantage {
+    padding: 0 5%;
+    margin-bottom: 42px;
+}
+.advantage__title {
+    color: $textColorBlack;
+    margin: 0;
+    font-size: 36px;
+    line-height: 60px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.advantage__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+
+@media (min-width: $tablet-width) {
+    .advantage {
+        padding: 0;
+        margin-bottom: 50px;
+        border-bottom: 1px solid $borderGrayMainPage;
+    }
+    .advantage__wrapper {
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 57px;
+    }
+    .advantage__title {
+        font-size: 60px;
+        margin-bottom: 75px;
+    }
+
+    .advantage__list {
+        gap: 90px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .advantage {
+        border: none;
+        margin-bottom: 85px;
+    }
+    
+    .advantage__wrapper {
+        width: $desktop-content-width;
+        padding-bottom: 0;
+    }
+
+    .advantage__list {
+        gap: 0;
+    }
+}

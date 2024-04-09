@@ -57,3 +57,8 @@ export interface AddCommentsProps {
     setVisible: (e: boolean) => void;
     visible: boolean;
 }
+
+export interface DeleteCommentProps {
+    commentId: number;
+    setVisible: (e: boolean) => void;
+}

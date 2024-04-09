@@ -1,0 +1,32 @@
+@import './variables.scss';
+
+.pageFooter {
+    background-color: $backgroundColorGray;
+    box-sizing: border-box;
+}
+
+@media (min-width: $tablet-width) {
+    .pageFooter {
+        height: 150px;
+    }
+    .pageFooter__wrapper {
+        display: flex;
+        margin: 0 auto;
+        width: 90%;
+        justify-content: space-between;
+        
+        padding: 58px 0;
+        box-sizing: border-box;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .pageFooter {
+        height: 150px;
+    }
+    .pageFooter__wrapper {
+        width:$desktop-content-width;
+        
+        padding: 60px 0 55px;
+    }
+}
