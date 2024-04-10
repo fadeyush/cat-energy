@@ -1,15 +1,15 @@
-@import './variables.scss';
+@import '../../styles/variables.scss';
 
 .commentItem {
     border-bottom: 1px solid $borderFooter;
     padding: 15px 0;
     position: relative;
 
-    p:not(.deleteComment__info) {
+    .commentItem__title,
+    .commentItem__body {
         margin: 0;
     }
 }
-
 
 .commentItem__deleteActive {
     border: none;
@@ -64,7 +64,7 @@
     width: 50px;
     height: 50px;
 
-    background-image: url('../assets/img/icon-profile.png');
+    background-image: url('../../assets/img/icon-profile.png');
     background-repeat: no-repeat;
     background-size: 50px 50px;
 }

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import classes from '../styles/ProgramMainPage.module.scss'
-import { ProgramItemProps } from '../types/programMainItem';
-import MainPageProgramItem from './MainPageProgramItem';
+import classes from './ProgramList.module.scss';
+import { ProgramItemProps } from '../../types/programMainItem';
+import MainPageProgramItem from '../mainPageProgramItem/MainPageProgramItem';
 
 const ProgramList: FC = () => {
     const programItems: ProgramItemProps[] = [

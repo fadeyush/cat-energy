@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.scss';
 import Router from './components/Router';
-import PageHeaderNavigation from './components/PageHeaderNavigation';
-import Footer from './components/Footer';
+import PageHeaderNavigation from './components/pageHeaderNavigation/PageHeaderNavigation';
+import Footer from './components/footer/Footer';
 import { useResize } from './hooks/useResize';
 import { useDispatch } from 'react-redux';
 

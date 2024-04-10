@@ -1,0 +1,54 @@
+@import '../../styles/variables.scss';
+
+.mainNav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    text-transform: uppercase;
+    text-align: center;
+
+    position: absolute;
+    width: 100%;
+    
+    display: none;
+
+    &__opened {
+        display: block;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .pageHeader__navigation {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        min-height: 100px;
+        margin: 0 auto;
+    }
+    .mainNav__list {
+        text-align: center;
+
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        position: relative;
+
+        width: 60%;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .pageHeader__navigation {
+        width: $desktop-content-width;
+        margin: 0 auto;
+    }
+    .mainNav__list {
+        justify-content: end;
+        gap: 5%;
+
+        width: 50%;
+    }
+}

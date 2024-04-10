@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import '../../styles/variables.scss';
 
 .comments__list {
     margin: 0;
@@ -6,6 +6,34 @@
     padding: 0;
     height: 295px;
 }
+.pagination__list {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 10px auto 20px;
+    width: 76px;
+}
+
+.pagination__button{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $buttonGreen;
+    border: none;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pagination__buttonActive {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 3px solid $buttonGreen;
+    padding: 0;
+    box-sizing: content-box;
+    background-color: transparent;
+}
+
 
 
 @media (min-width: $tablet-width) {
@@ -16,6 +44,21 @@
     .comments__list {
         height: 370px;
     }
+
+    .pagination__list {
+        margin: 5px auto 30px;
+        width: 87px;
+    }
+    
+    .pagination__button{
+        width: 12px;
+        height: 12px;
+    }
+    
+    .pagination__buttonActive {
+        width: 12px;
+        height: 12px;
+    }
 }
 
 @media (min-width: $desktop-width) {
@@ -25,5 +68,24 @@
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 25px;
+    }
+
+    .pagination__list {
+        margin: 10px auto 45px;
+        width: 101px;
+    }
+    
+    .pagination__button{
+        width: 15px;
+        height: 15px;
+    }
+    
+    .pagination__buttonActive {
+        width: 15px;
+        height: 15px;
+    }
+
+    .commentsList__wrapper {
+        height: 250px;
     }
 }

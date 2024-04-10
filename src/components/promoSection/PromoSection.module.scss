@@ -1,8 +1,8 @@
-@import './variables.scss';
+@import '../../styles/variables.scss';
 
 .promo {
     background: linear-gradient(180deg,$backgroundColorGreen 62.8%,$backgroundColorWhite 62.4%);
-    background-image: url(../assets/img/index-background-mobile@2x.jpg), linear-gradient(180deg,$backgroundColorGreen 100.8%,$backgroundColorWhite 62.4%);
+    background-image: url(../../assets/img/index-background-mobile@2x.jpg), linear-gradient(180deg,$backgroundColorGreen 100.8%,$backgroundColorWhite 62.4%);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: auto 309px;
@@ -12,7 +12,7 @@
 
 .promo__wrapper {
     padding: 0 5%;
-    background-image: url(../assets/img/content/index-can-mobile@2x.png);
+    background-image: url(../../assets/img/content/index-can-mobile@2x.png);
     background-repeat: no-repeat;
     background-position: center 170px;
     background-size: 280px 270px;
@@ -48,7 +48,7 @@
     margin-bottom: 22px;
 }
 
-.promo__button-link {
+.promo__button_link {
     text-decoration: none;
     color: $textColorWhite;
 }
@@ -68,7 +68,7 @@
         text-align: start;
         min-height: 860px;
 
-        background-image: url(../assets/img/content/index-can-tablet@2x.jpg);
+        background-image: url(../../assets/img/content/index-can-tablet@2x.jpg);
 
         background-position: center 235px;
         background-size: 709px 609px;
@@ -111,7 +111,7 @@
     .promo::after {
         position: absolute;
         content: '';
-        background-image: url(../assets/img/index-background-desktop@2x.jpg),linear-gradient(90deg,#fff 50%,#64a83b 50%);
+        background-image: url(../../assets/img/index-background-desktop@2x.jpg),linear-gradient(90deg,#fff 50%,#64a83b 50%);
         top: -147px;
         right: 0;
         z-index: -999;
@@ -129,7 +129,7 @@
        min-height: 550px;
        padding: 88px 0 0 80px;
 
-       background-image: url(../assets/img/content/index-can-desktop@2x.png);
+       background-image: url(../../assets/img/content/index-can-desktop@2x.png);
         background-position: 495px 0;
         background-size: 552px 499px;
     }

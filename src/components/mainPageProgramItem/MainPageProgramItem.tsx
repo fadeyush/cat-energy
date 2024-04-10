@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
-import { ProgramItemProps } from '../types/programMainItem';
-import classes from '../styles/ProgramMainPage.module.scss'
+import { ProgramItemProps } from '../../types/programMainItem';
+import classes from './ProgramMainPage.module.scss';
 import { NavLink } from 'react-router-dom';
-import { Pages } from '../types/pageHeader';
+import { Pages } from '../../types/pageHeader';
 
 const MainPageProgramItem: FC<ProgramItemProps> = ({info, catalogName, catalogButtonName, className}) => {
     return (

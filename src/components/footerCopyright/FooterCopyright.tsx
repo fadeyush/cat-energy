@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import classes from './FooterCopyright.module.scss';
-import {ReactComponent as LogoHTMLAcademy} from '../assets/img/icons/logo-htmlacademy.svg';
+import {ReactComponent as LogoHTMLAcademy} from '../../assets/img/icons/logo-htmlacademy.svg';
 import { NavLink } from 'react-router-dom';
 
 const FooterCopyright: FC = () => {

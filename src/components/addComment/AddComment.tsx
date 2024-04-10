@@ -1,6 +1,6 @@
 import React, { FC, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import classes from './comments.module.scss';
+import classes from './AddComment.module.scss';
 import MyButton from '../UI/button/MyButton';
 import { buttonTypes } from '../../types/button'; 
 import MyModal from '../UI/modal/MyModal';

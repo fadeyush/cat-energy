@@ -1,15 +1,15 @@
 import React, { FC } from 'react';
-import PromoSection from '../components/PromoSection';
-import ProgramList from '../components/ProgramList';
-import Advantage from '../components/Advantage';
-import Comments from '../components/Comments';
+import PromoSection from '../components/promoSection/PromoSection';
+import ProgramList from '../components/pageProgramList/ProgramList';
+import Andvantage from '../components/advantage/Advantage';
+import Comments from '../components/comments/Comments';
 
 const Main: FC = () => {
     return (
         <main>
            <PromoSection/>
            <ProgramList/>
-           <Advantage/>
+           <Andvantage/>
            <Comments/>
         </main>
     );

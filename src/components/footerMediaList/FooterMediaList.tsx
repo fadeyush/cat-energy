@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { MediaProps } from '../../types/footer';
-import {ReactComponent as VkIkon} from '../assets/img/icons/icon-vk.svg';
-import {ReactComponent as IgIkon} from '../assets/img/icons/icon-insta.svg';
-import {ReactComponent as FbIkon} from '../assets/img/icons/icon-fb.svg';
+import {ReactComponent as VkIkon} from '../../assets/img/icons/icon-vk.svg';
+import {ReactComponent as IgIkon} from '../../assets/img/icons/icon-insta.svg';
+import {ReactComponent as FbIkon} from '../../assets/img/icons/icon-fb.svg';
 import FooterMediaItem from '../footerMediaItem/FooterMediaItem';
 import classes from './FooterMediaList.module.scss';
 

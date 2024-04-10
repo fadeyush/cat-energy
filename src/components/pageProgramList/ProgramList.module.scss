@@ -1,0 +1,38 @@
+@import '../../styles/variables.scss';
+
+.program {
+    margin-bottom: 33px;
+}
+
+.program__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: $tablet-width) {
+    .program {
+        margin-bottom: 55px;
+    }
+
+    .program__list {
+        gap: 30px;
+    }    
+}
+
+@media (min-width: $desktop-width) {
+    .program {
+        width: $desktop-content-width;
+        margin: 0 auto;
+        padding: 0;
+        margin-bottom: 80px;
+    }
+
+    .program__list {
+        margin: 0;
+        flex-direction: row;
+        gap: 80px;
+    }  
+}
