@@ -29,6 +29,10 @@
     }
 }
 
+.button__logOut {
+    margin: 0;
+}
+
 @media (min-width: $tablet-width) {
     .mainNav__item {
         font-weight: 400;
@@ -75,6 +79,10 @@
             a:active {
                 opacity: 0.7;
             }
+        }
+        
+        .button__logOut {
+            color: $textColorWhite;
         }
     }
     .mainNav__item {  

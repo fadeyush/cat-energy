@@ -6,11 +6,16 @@ import { PageHederItemProps } from '../../types/pageHeader';
 const PageHeaderItem: FC<PageHederItemProps> = ({link, name, onClick}) => {
     return (
         <li className={classes.mainNav__item}>
-            <NavLink onClick={onClick}
-                    className={({ isActive }) => isActive ? `${classes.mainNav__item__active}` : undefined}
-                    to={link}>
-                {name}
-            </NavLink> 
+            {
+                link ?
+                <NavLink onClick={onClick}
+                        className={({ isActive }) => isActive ? `${classes.mainNav__item__active}` : undefined}
+                        to={link}>
+                    {name}
+                </NavLink> 
+                :
+                <p onClick={onClick} className={classes.button__logOut}>{name}</p>
+            }
         </li>
     );
 };

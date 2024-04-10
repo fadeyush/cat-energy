@@ -1,6 +1,6 @@
 export interface PageHederItemProps {
     name: string;
-    link: string;
+    link?: string;
     onClick: () => void;
 }
 
@@ -9,4 +9,5 @@ export enum Pages {
     catalog = '/catalog',
     program = '/program',
     error = '/error',
+    login = '/login'
 }

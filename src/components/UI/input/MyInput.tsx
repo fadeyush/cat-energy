@@ -11,7 +11,7 @@ const MyInput = React.forwardRef<HTMLInputElement, InputProps>((props, ref) => {
     }
 
     return ( 
-        <input onClick={()=>props.setError(false)} ref={ref} className={rootClasses.join(' ')} type={props.type} placeholder={props.placeholder}/>
+        <input onClick={props.setError ? ()=>props.setError!(false): undefined} ref={ref} className={rootClasses.join(' ')} type={props.type} placeholder={props.placeholder}/>
     )
 });
 
