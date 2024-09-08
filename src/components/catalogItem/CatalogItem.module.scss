@@ -1,0 +1,27 @@
+.catalogItem {
+    display: flex;
+    justify-content: space-between;
+    height: 144px;
+    padding: 40px 0 21px;
+}
+
+.catalogItem__img {
+    width: 65px;
+    height: 79px;
+    display: block;
+    margin: auto;
+}
+
+.catalogItem__wrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.catalogItem__button {
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+    height: 40px;
+}
