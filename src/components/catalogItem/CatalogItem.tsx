@@ -11,11 +11,11 @@ import { buttonTypes } from '../../types/button';
 
 const CatalogItem: FC<CatalogItemProps> = ({title, table, imgSrc}) => {
     return (
-        <li>
-            <div className={classes.catalogItem}>
+        <li className={classes.catalogItem}>
+            <div className={classes.catalogItem__wrapper}>
                 <img className={classes.catalogItem__img} src={imgSrc === 'chicken' ? chicken : imgSrc === 'fish' ? fish : imgSrc === 'buckwheat' ? buckwheat : rice}/>
-                <div className={classes.catalogItem__wrapper}>
-                    <h3>{title}</h3>
+                <div className={classes.catalogItem__content}>
+                    <h3 className={classes.catalogItem__title}>Cat Energy <br></br>{title}</h3>
                     <CatalogItemTable volume={table.volume} price={table.price} taste={table.taste}/>
                 </div>
             </div>

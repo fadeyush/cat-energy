@@ -1,15 +1,14 @@
 @import './variables.scss';
 
 .catalog__wrappper {
-    padding: 0 15%;
     text-align: center;
+    min-width: 280px;
 }
 
 .catalogTitle {
     font-size: 36px;
     margin: 0;
     padding: 30px 0 40px;
-    line-height: 60px;
     font-weight: 400;
     color: $textColorBlack;
 }

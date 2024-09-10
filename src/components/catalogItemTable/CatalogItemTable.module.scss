@@ -1,5 +1,4 @@
 .catalogItemTable {
-    width: 140px;
     height: 50px;
 
     font-size: 12px;
@@ -7,8 +6,25 @@
     line-height: 16px;
 
     font-family: Arial, Helvetica, sans-serif;
+
+    border-spacing: 0;
+
+    margin-right: 15%;
 }
 
 .catalogItemTable__value {
     text-align: end;
+}
+
+@media (min-width: 380px) {
+    .catalogItemTable {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 550px) {
+    .catalogItemTable {
+        height: 55px;
+        font-size: 14px;
+    }
 }
