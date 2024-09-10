@@ -15,7 +15,7 @@ const PageHeaderNavigation: FC = ({}) => {
     const { isAuth } = useTypedSelector(state => state.isAuth);
 
     const closeModal = () => {
-        setModalNavigate(!modalNavigate)
+        setModalNavigate(false)
     }
     const logOut = () => {
         dispatch({type: 'LOG_OUT', payload: true})
@@ -41,7 +41,7 @@ const PageHeaderNavigation: FC = ({}) => {
     return (
         <div className={location.pathname === Pages.about ? `${classes.pageHeader__navigation} ${cl.pageHeader__navigation__about}` : classes.pageHeader__navigation}>
             <PageHeaderLogo onClickButton={toggleModal} onClickLogo={closeModal}/>
-            <ul className={modalNavigate ? classes.mainNav__list : `${classes.mainNav__list} ${classes.mainNav__list__opened}`}>
+            <ul className={modalNavigate ? `${classes.mainNav__list} ${classes.mainNav__list__opened}` : classes.mainNav__list}>
                 {
                     isAuth ?
                     pagesPrivate.map(page =>

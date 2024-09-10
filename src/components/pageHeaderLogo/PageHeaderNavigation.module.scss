@@ -4,8 +4,6 @@
     width: 190px;
     text-align: center;
 
-    box-sizing: border-box;
-
     padding: 13px 0;
 
     display: block;
@@ -22,6 +20,7 @@
 .navLogo__elem {
     width: 190px;
     padding-right: 60px;
+    box-sizing: content-box;
 
     .st0 {
         fill: #FDC305;

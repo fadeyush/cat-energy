@@ -8,4 +8,5 @@ export interface CatalogItemProps {
     title: string;
     table: CatalogItemTableProps;
     imgSrc: string;
+    id: number;
 }
