@@ -37,11 +37,13 @@ const CommentsList: FC = () => {
                 )}
             </ul>
 
-            <div className={classes.pagination__list}>
+            <ul className={classes.pagination__list}>
                 {pages.map(p=>
-                    <button onClick={()=>dispatch(setCommentsPage(p))} key={p} className={page==p ? classes.pagination__buttonActive : classes.pagination__button}><p className='visually-hidden'>{p}</p></button>
+                    <li>
+                        <button onClick={()=>dispatch(setCommentsPage(p))} key={p} className={page==p ? classes.pagination__buttonActive : classes.pagination__button}><p className='visually-hidden'>{p}</p></button>
+                    </li>
                 )}
-            </div>
+            </ul>
         </div>
         );
 };

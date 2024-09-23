@@ -4,14 +4,24 @@
     margin: 0;
     list-style: none;
     padding: 0;
-    height: 295px;
 }
+
 .pagination__list {
     display: flex;
     gap: 5px;
     align-items: center;
     margin: 10px auto 20px;
-    width: 76px;
+    width: 100px;
+
+    list-style: none;
+
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 15px;
+        height: 15px;
+    }
 }
 
 .pagination__button{
@@ -22,19 +32,26 @@
     border: none;
     padding: 0;
     box-sizing: border-box;
+
+    cursor: pointer;
+
+    &:hover {
+        width: 15px;
+        height: 15px;
+    }
 }
 
 .pagination__buttonActive {
     width: 10px;
-    height: 10px;
+    height: 9px;
     border-radius: 50%;
     border: 3px solid $buttonGreen;
     padding: 0;
     box-sizing: content-box;
     background-color: transparent;
+
+    cursor: pointer;
 }
-
-
 
 @media (min-width: $tablet-width) {
     .commentsList__wrapper {
@@ -47,7 +64,6 @@
 
     .pagination__list {
         margin: 5px auto 30px;
-        width: 87px;
     }
     
     .pagination__button{
@@ -72,12 +88,22 @@
 
     .pagination__list {
         margin: 10px auto 45px;
-        width: 101px;
+        width: 120px;
+
+        li {
+            width: 20px;
+            height: 20px;
+        }
     }
     
     .pagination__button{
         width: 15px;
         height: 15px;
+
+        &:hover {
+            width: 20px;
+            height: 20px;
+        }
     }
     
     .pagination__buttonActive {
