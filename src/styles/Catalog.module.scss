@@ -33,3 +33,10 @@
         margin: 0 auto;
     } 
 }
+
+@media (min-width: $desktop-width) {
+    .catalog__wrappper {
+        width: 1200px;
+        margin: 0 auto;
+    } 
+}
