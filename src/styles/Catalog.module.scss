@@ -12,3 +12,24 @@
     font-weight: 400;
     color: $textColorBlack;
 }
+
+@media (min-width: $tablet-width) {
+    .catalog__wrappper {
+        text-align: start;
+        margin: 0 auto;
+    } 
+
+    .catalogTitle {
+        font-size: 60px;
+        padding: 20px 0 70px;
+        line-height: 60px;
+    }
+}
+
+@media (min-width: 800px) {
+    .catalog__wrappper {
+        text-align: start;
+        width: 90%;
+        margin: 0 auto;
+    } 
+}

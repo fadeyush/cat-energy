@@ -8,8 +8,8 @@
 
     .catalogItem:nth-child(2n) {
         .catalogItem__img {
-            width: 79px;
-            height: 93px;
+            width: 164px;
+            height: 110px;
         }
     }
 }
@@ -28,8 +28,8 @@
 }
 
 .catalogItem__img {
-    width: 68px;
-    height: 82px;
+    width: 139px;
+    height: 92px;
     display: block;
     margin: auto;
 }
@@ -42,6 +42,7 @@
 }
 
 .catalogItem__title {
+    width: 92px;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -66,8 +67,8 @@
     .catalogList {
         .catalogItem:nth-child(2n) {
             .catalogItem__img {
-                width: 92px;
-                height: 110px;
+                width: 169px;
+                height: 120px;
             }
         }
     }
@@ -84,8 +85,8 @@
     }
     
     .catalogItem__img {
-        width: 75px;
-        height: 92px;
+        width: 157px;
+        height: 103px;
     }
     
     .catalogItem__title {
@@ -93,3 +94,75 @@
         line-height: 24px;
     } 
 }
+
+@media (min-width: $tablet-width) {
+    .catalogList {
+        min-width: 708px;
+        max-width: 895px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 60px;
+    
+        .catalogItem:nth-child(2n) {
+            .catalogItem__img {
+                width: 260px;
+                height: 198px;
+            }
+        }
+
+        .catalogItem:nth-child(2n+1) {
+            .catalogItem__img {
+                top: 32px;
+            }
+        }
+    }
+    
+    .catalogItem {
+        min-width: 324px;
+        width: 45%;
+        height: 512px;
+        padding: 0 35px 40px;
+        border-top: none;
+        background-image: linear-gradient(180deg, $backgroundColorWhite 87px, $backgroundColorGray 87px);
+    }
+    
+    .catalogItem__wrapper {
+        justify-content: center;
+        height: 431px;
+        padding: 0;
+
+        position: relative;
+    }
+    
+    .catalogItem__img {
+        position: absolute;
+        top: 0;
+        width: 245px;
+        height: 166px;
+    }
+    
+    .catalogItem__content{
+        height: 155px;
+        margin-top: 245px;
+        width: auto;
+    }
+    
+    .catalogItem__title {
+        font-size: 20px;
+        font-weight: 500;
+        width: 133px;
+        margin: 0 auto;
+        text-align: center;
+    }    
+}
+
+// @media (min-width: $desktop-width) {
+//     .logIn__wrapper {
+//         width: 60%;
+//         input {
+//             width: 60%;
+//         }
+//     }
+// }
