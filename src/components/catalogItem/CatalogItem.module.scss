@@ -12,12 +12,15 @@
             height: 110px;
         }
     }
-}
 
-.catalogItem {
-    height: 209px;
-    padding-bottom: 25px;
-    border-top: 1px solid $backgroundColorGray;
+    li {
+        height: 209px;
+        padding-bottom: 25px;
+        border-top: 1px solid $backgroundColorGray;
+    }
+
+    margin-bottom: 30px;
+    border-bottom: 1px solid $backgroundColorGray;
 }
 
 .catalogItem__wrapper {
@@ -58,8 +61,10 @@
 }
 
 @media (min-width: 380px) {
-    .catalogItem {
-        padding: 0 10% 25px;
+    .catalogList {
+        li {
+            padding: 0 10% 25px;
+        }
     }
 }
 
@@ -71,13 +76,13 @@
                 height: 120px;
             }
         }
-    }
-    
-    .catalogItem {
-        height: 230px;
-        width: 525px;
-        margin: 0 auto;
-        padding: 0 0 25px;
+
+        li { 
+            height: 230px;
+            width: 525px;
+            margin: 0 auto;
+            padding: 0 0 25px;
+        }
     }
     
     .catalogItem__wrapper {
@@ -102,7 +107,7 @@
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: start;
         gap: 60px;
     
         .catalogItem:nth-child(2n) {
@@ -117,14 +122,21 @@
                 top: 32px;
             }
         }
+
+        li { 
+            min-width: 324px;
+            width: 45%;
+            height: 512px;
+            margin: 0;
+            border-top: none;
+        }
+
+        margin-bottom: 30px;
+        border-bottom: none;
     }
     
     .catalogItem {
-        min-width: 324px;
-        width: 45%;
-        height: 512px;
         padding: 0 35px 40px;
-        border-top: none;
         background-image: linear-gradient(180deg, $backgroundColorWhite 87px, $backgroundColorGray 87px);
     }
     
@@ -162,13 +174,15 @@
     .catalogList {
         width: 1220px;
         max-width: 1200px;
-        gap: 70px;
+        gap: 73px;
+
+        li { 
+            min-width: 245px;
+            width: 245px;
+        }
     }
-    
+
     .catalogItem {
-        min-width: 245px;
-        width: 245px;
         padding: 0 40px 40px;
-        background-image: linear-gradient(180deg, $backgroundColorWhite 87px, $backgroundColorGray 87px);
     }
 }

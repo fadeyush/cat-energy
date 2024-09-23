@@ -2,6 +2,7 @@ import React from 'react';
 import classes from '../catalogItem/CatalogItem.module.scss';
 import { CatalogItemProps } from '../../types/catalogItem';
 import CatalogItem from '../catalogItem/CatalogItem';
+import CatalogShowMore from '../catalogShowMore/CatalogShowMore';
 
 const CatalogList = () => {
     const catalogList: CatalogItemProps[] = [
@@ -19,6 +20,7 @@ const CatalogList = () => {
             {catalogList.map(item => 
                 <CatalogItem id={item.id} key={item.id} title={item.title} table={item.table} imgSrc={item.imgSrc}/>
             )}
+            <li><CatalogShowMore/></li>
         </ul>
     );
 };
