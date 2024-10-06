@@ -4,10 +4,10 @@ import CatalogList from '../components/catalogList/CatalogList';
 
 const Catalog: FC = () => {
     return (
-        <div className={classes.catalog__wrappper}>
+        <main className={classes.catalog__wrappper}>
             <h1 className={classes.catalogTitle}>Каталог продукции</h1>
             <CatalogList/>
-        </div>
+        </main>
     );
 };
 

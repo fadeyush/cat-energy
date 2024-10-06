@@ -39,8 +39,8 @@ const CommentsList: FC = () => {
 
             <ul className={classes.pagination__list}>
                 {pages.map(p=>
-                    <li>
-                        <button onClick={()=>dispatch(setCommentsPage(p))} key={p} className={page==p ? classes.pagination__buttonActive : classes.pagination__button}><p className='visually-hidden'>{p}</p></button>
+                    <li key={p}>
+                        <button onClick={()=>dispatch(setCommentsPage(p))} className={page==p ? classes.pagination__buttonActive : classes.pagination__button}><p className='visually-hidden'>{p}</p></button>
                     </li>
                 )}
             </ul>

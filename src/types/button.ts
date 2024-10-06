@@ -3,6 +3,7 @@ export interface PropsProperties {
     className?: string;
     colorType: string;
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+    type?: string;
 }
 
 export enum buttonTypes {
