@@ -4,4 +4,6 @@ export interface InputProps {
     className?: string;
     isError?: boolean;
     setError?: (e: boolean) => void;
+    value?: string | number;
+    onChange?: (e:  React.FormEvent<HTMLInputElement>) => void;
 }
