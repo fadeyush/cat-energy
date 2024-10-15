@@ -17,7 +17,7 @@ const Program: FC = () => {
 
     const onSubmit: SubmitHandler<ProgrammFormProps> = (data) => {
         console.log(data);
-        // reset();
+        reset();
     }
 
     const errName = formState.errors['name']?.message;
