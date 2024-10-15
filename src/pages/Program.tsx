@@ -8,12 +8,16 @@ import MyInput from '../components/UI/input/MyInput';
 
 const Program: FC = () => {
     const { register, handleSubmit, formState, reset, control } = useForm<ProgrammFormProps>({
-        mode: 'onChange'
+        mode: 'onChange',
+        defaultValues: {
+            target: 'weightloss',
+            sweetener: true
+        }
     });
 
     const onSubmit: SubmitHandler<ProgrammFormProps> = (data) => {
         console.log(data);
-        reset();
+        // reset();
     }
 
     const errName = formState.errors['name']?.message;
@@ -27,8 +31,8 @@ const Program: FC = () => {
             <h1 className={classes.program__title}>Подбор программы</h1>
             <p className={classes.program__info}>Заполните анкету и мы подберем программу питания для вашего кота</p>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <div>  
-                    Имя:
+                <div className={classes.programItem__wrappper}>  
+                    Имя:*
                     <Controller 
                         name='name' 
                         control={control} 
@@ -37,8 +41,8 @@ const Program: FC = () => {
                     {errName && <p className={classes.program__error}>{errName}</p>}
                 </div>
 
-                <div>  
-                    Вес (кг):
+                <div className={classes.programItem__wrappper}>  
+                    Вес (кг):*
                     <Controller 
                         name='weight' 
                         control={control} 
@@ -53,8 +57,8 @@ const Program: FC = () => {
                     {errWeight && <p className={classes.program__error}>{errWeight}</p>}
                 </div>
 
-                <div>  
-                    Возраст (лет):
+                <div className={classes.programItem__wrappper}>  
+                    Возраст (лет):*
                     <Controller 
                         name='age' 
                         control={control} 
@@ -69,45 +73,99 @@ const Program: FC = () => {
                     {errAge && <p className={classes.program__error}>{errAge}</p>}
                 </div>
 
-                <div>  
-                    E-mail:
-                    <Controller 
-                        name='email' 
-                        control={control} 
-                        rules={{ 
-                            required: 'Обязательное поле',
-                            pattern: {
-                                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                                message: "Неправильно введен email"
-                            }
-                        }}
-                        render={({ field: { value, onChange } }) => <MyInput isError={errEmail ? true : false} onChange={onChange} value={value} type='email' placeholder='kuklachev@gmail.com' />}/>
-                    {errEmail && <p className={classes.program__error}>{errEmail}</p>}
-                </div>
-
-                <div>  
-                    Телефон:
-                    <Controller 
-                        name='phone' 
-                        control={control} 
-                        rules={{ 
-                            required: 'Обязательное поле',
-                            minLength: { value: 11, message: 'Неправильно введен телефон'},
-                            maxLength: { value: 15, message: 'Неправильно введен телефон'},
-                            pattern: {
-                                value: /^\s*[\d]+(?:,[\d]+)?\s*$/,
-                                message: "Неправильно введен телефон"
-                            }
-                        }}
-                        render={({ field: { value, onChange } }) => <MyInput isError={errPhone ? true : false} onChange={onChange} value={value} type='tel' placeholder='8 (960) 900-60-90' />}/>
-                    {errPhone && <p className={classes.program__error}>{errPhone}</p>}
-                </div>
+                <ul>
+                    <li>
+                        <label>
+                            <input {...register("target", { required: true })} type="radio" value="weightloss"/>Похудение
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input {...register("target", { required: true })} type="radio" value="massgain"/>Набор массы
+                        </label>  
+                    </li>
+                    <li>
+                        <label>
+                            <input {...register("target", { required: true })} type="radio" value="needadvice"/>Не знаю (нужен ваш совет)
+                        </label>
+                    </li>
+                </ul>
 
                 <div>
-                    Комментарии:
+                    <p>Контактные данные (владельца кота)</p>
+                    <div className={classes.programItem__wrappper}>  
+                        E-mail:*
+                        <Controller 
+                            name='email' 
+                            control={control} 
+                            rules={{ 
+                                required: 'Обязательное поле',
+                                pattern: {
+                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                    message: "Неправильно введен email"
+                                }
+                            }}
+                            render={({ field: { value, onChange } }) => <MyInput isError={errEmail ? true : false} onChange={onChange} value={value} type='email' placeholder='kuklachev@gmail.com' />}/>
+                        {errEmail && <p className={classes.program__error}>{errEmail}</p>}
+                    </div>
+
+                    <div className={classes.programItem__wrappper}>  
+                        Телефон:*
+                        <Controller 
+                            name='phone' 
+                            control={control} 
+                            rules={{ 
+                                required: 'Обязательное поле',
+                                minLength: { value: 11, message: 'Неправильно введен телефон'},
+                                maxLength: { value: 15, message: 'Неправильно введен телефон'},
+                                pattern: {
+                                    value: /^\s*[\d]+(?:,[\d]+)?\s*$/,
+                                    message: "Неправильно введен телефон"
+                                }
+                            }}
+                            render={({ field: { value, onChange } }) => <MyInput isError={errPhone ? true : false} onChange={onChange} value={value} type='tel' placeholder='8 (960) 900-60-90' />}/>
+                        {errPhone && <p className={classes.program__error}>{errPhone}</p>}
+                    </div>
+                </div>
+                
+                <div className={classes.programItem__wrappper}>
+                    <p>Комментарии:</p>
                     <textarea {...register("comments")} placeholder='Расскажите обо всех повадках кота'></textarea>
                 </div>
 
+                <div>
+                    <p>Дополнительно</p>
+                    <ul>
+                        <li>
+                            <label>
+                                <input {...register("sweetener")} type="checkbox"/>
+                                Сахарозаменитель
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input {...register("water")} type="checkbox"/>
+                                Питьевая вода
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input {...register("milk")} type="checkbox"/>
+                                Молоко
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input {...register("vitamins")} type="checkbox"/>
+                                Витамины
+                            </label>
+                        </li>
+                    </ul>
+                    
+
+                </div>
+
+                <p>* — Обязательные поля</p>
                 <MyButton colorType={buttonTypes.green} type='submit'>Отправить заявку</MyButton>
             </form>
         </main>

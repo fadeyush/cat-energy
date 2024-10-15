@@ -2,7 +2,7 @@ export interface ProgrammFormProps {
     name: string;
     weight: number;
     age: number;
-    target: 'string';
+    target: string;
     email: string;
     phone: string;
     comments: string;
